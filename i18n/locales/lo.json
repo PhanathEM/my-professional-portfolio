@@ -19,7 +19,6 @@
     "home": "ໜ້າຫຼັກ"
   },
   "theme": {
-    "system": "ລະບົບ",
     "light": "ແຈ້ງ",
     "dark": "ມືດ"
   },
@@ -250,4 +249,3 @@
     "contactDescription": "ຕິດຕໍ່ກ່ຽວກັບວຽກ freelance, ຝຶກງານ ຫຼື ວຽກເຕັມເວລາ. ອີເມວ, GitHub, LinkedIn ແລະ ຟອມຕິດຕໍ່."
   }
 }
- 

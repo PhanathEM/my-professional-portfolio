@@ -70,7 +70,7 @@ export default defineNuxtConfig({
 
   colorMode: {
     classSuffix: '',
-    preference: 'system',
+    preference: 'dark', // only light / dark — no system option in the UI
     fallback: 'dark',
     storageKey: 'portfolio-color-mode',
   },
