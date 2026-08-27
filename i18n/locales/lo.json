@@ -1,0 +1,253 @@
+{
+  "_note": "Machine-assisted Lao translation — a native speaker review is recommended before publishing.",
+  "nav": {
+    "home": "ໜ້າຫຼັກ",
+    "about": "ກ່ຽວກັບ",
+    "skills": "ທັກສະ",
+    "projects": "ໂຄງການ",
+    "experience": "ປະສົບການ",
+    "blog": "ບລັອກ",
+    "contact": "ຕິດຕໍ່"
+  },
+  "a11y": {
+    "skipToContent": "ຂ້າມໄປຫາເນື້ອຫາ",
+    "primaryNav": "ເມນູຫຼັກ",
+    "footerNav": "ສ່ວນທ້າຍ",
+    "toggleMenu": "ເປີດ/ປິດ ເມນູ",
+    "changeTheme": "ປ່ຽນຮູບແບບສີ",
+    "changeLanguage": "ປ່ຽນພາສາ",
+    "home": "ໜ້າຫຼັກ"
+  },
+  "theme": {
+    "system": "ລະບົບ",
+    "light": "ແຈ້ງ",
+    "dark": "ມືດ"
+  },
+  "language": {
+    "label": "ພາສາ"
+  },
+  "profile": {
+    "intro": "ສະບາຍດີ, ຂ້ອຍແມ່ນ",
+    "role": "ນັກພັດທະນາ Full-Stack",
+    "tagline": "ຂ້ອຍສ້າງແອັບພລິເຄຊັນເວັບທີ່ທັນສະໄໝ ຂະຫຍາຍໄດ້ ແລະ ເນັ້ນຜູ້ໃຊ້ ດ້ວຍສະຖາປັດຕະຍະກຳທີ່ສະອາດ ແລະ ປະສົບການຜູ້ໃຊ້ທີ່ພິຖີພິຖັນ.",
+    "availability": "ຫວ່າງສຳລັບວຽກ Freelance ແລະ ຝຶກງານ",
+    "location": "ນະຄອນຫຼວງພະນົມເປັນ, ກຳປູເຈຍ",
+    "philosophy": "ຊອບແວທີ່ດີແມ່ນ «ທຳມະດາ» ໃນທາງທີ່ດີທີ່ສຸດ: ໂຄງສ້າງທີ່ຄາດເດົາໄດ້, ການຕັ້ງຊື່ທີ່ຊັດເຈນ, ອົງປະກອບນ້ອຍໆ, ແລະ ບໍ່ມີຄວາມສະຫຼາດທີ່ເພື່ອນຮ່ວມທີມຕ້ອງມານັ່ງແກະໃນຕອນທ່ຽງຄືນ. ຂ້ອຍຂຽນໂຄ້ດເພື່ອຄົນທີ່ຈະອ່ານມັນຕໍ່ໄປ.",
+    "learningJourney": "ຂ້ອຍເລີ່ມຈາກ HTML, CSS ແລະ JavaScript ພື້ນຖານ, ຜ່ານ PHP ແລະ Laravel ສຳລັບພື້ນຖານ Backend, ຈາກນັ້ນໃຊ້ TypeScript ທັງໝົດ. ແຕ່ລະໂຄງການໃນເວັບໄຊນີ້ສະແດງເຖິງບາດກ້າວໜຶ່ງໃນເສັ້ນທາງນັ້ນ — ຈາກແອັບ CRUD ທຳອິດ ຮອດແອັບຫຼາຍບໍລິການທີ່ມີ type ຊັດເຈນ.",
+    "bio": {
+      "1": "ຂ້ອຍເປັນນັກພັດທະນາ full-stack ທີ່ເນັ້ນລະບົບນິເວດ Vue ແລະ Nuxt ໂດຍມີຄວາມສົນໃຈຫຼາຍໃນສະຖາປັດຕະຍະກຳທີ່ປອດໄພດ້ານ type, ການອອກແບບ API ແລະ ສິລະປະຂອງ interface.",
+      "2": "ຂ້ອຍມັກທຸກຂັ້ນຕອນຂອງການສ້າງຜະລິດຕະພັນ — ການສ້າງແບບຂໍ້ມູນ, ການອອກແບບໜ້າ API, ແລ້ວສ້າງ interface ທີ່ຮູ້ສຶກໄວ ແລະ ໃຊ້ງ່າຍ.",
+      "3": "ວຽກຂອງຂ້ອຍສ່ວນຫຼາຍຮອດຕອນນີ້ແມ່ນເຮັດດ້ວຍຕົນເອງ: ໂຄງການສຶກສາ, ການທົດລອງ open-source ແລະ ວຽກລູກຄ້ານ້ອຍໆ ທີ່ຂ້ອຍຮັບຜິດຊອບການຕັດສິນໃຈທັງໝົດ."
+    },
+    "focus": {
+      "1": "ສະຖາປັດຕະຍະກຳ Nuxt 4 ລະດັບການຜະລິດ ແລະ server routes",
+      "2": "ການອອກແບບ schema PostgreSQL ແລະ ປະສິດທິພາບ query",
+      "3": "ລະບົບການອອກແບບດ້ວຍ token ຂອງ Tailwind CSS v4",
+      "4": "ຍຸດທະສາດການທົດສອບ ແລະ CI ສຳລັບແອັບ full-stack"
+    },
+    "stats": {
+      "projectsLabel": "ໂຄງການ",
+      "projectsHint": "ໂຄງການສຶກສາ ແລະ ລູກຄ້າທີ່ສຳເລັດ",
+      "techLabel": "ເຕັກໂນໂລຊີ",
+      "techHint": "ພາສາ, ເຟຣມເວີກ ແລະ ເຄື່ອງມື",
+      "yearsLabel": "ປີແຫ່ງການຮຽນ",
+      "yearsHint": "ການຝຶກຝົນດ້ວຍຕົນເອງຢ່າງສະໝ່ຳສະເໝີ",
+      "focusLabel": "ຈຸດເນັ້ນປັດຈຸບັນ",
+      "focusHint": "Full-stack TypeScript"
+    }
+  },
+  "hero": {
+    "viewWork": "ເບິ່ງຜົນງານຂອງຂ້ອຍ",
+    "contactMe": "ຕິດຕໍ່ຂ້ອຍ"
+  },
+  "about": {
+    "eyebrow": "ກ່ຽວກັບ",
+    "title": "ນັກພັດທະນາທີ່ໃສ່ໃຈລາຍລະອຽດ",
+    "description": "ຂ້ອຍເຮັດວຽກທົ່ວທັງ stack ແຕ່ຂ້ອຍມີຄວາມສຸກທີ່ສຸດບ່ອນທີ່ການສ້າງແບບຈຳລອງຂໍ້ມູນພົບກັບສິລະປະຂອງ interface.",
+    "basedIn": "ຢູ່ທີ່",
+    "status": "ສະຖານະ",
+    "openToWork": "ພ້ອມຮັບວຽກ",
+    "philosophyLabel": "ຫຼັກການພັດທະນາ",
+    "currentFocus": "ຈຸດເນັ້ນປັດຈຸບັນ",
+    "learningJourney": "ເສັ້ນທາງການຮຽນ",
+    "portraitAlt": "ຮູບຂອງ {name}"
+  },
+  "skills": {
+    "eyebrow": "ທັກສະ",
+    "title": "ເຕັກໂນໂລຊີທີ່ຂ້ອຍໃຊ້",
+    "description": "ຈັດກຸ່ມຕາມບ່ອນທີ່ພວກມັນຢູ່ໃນ stack — ເຄື່ອງມືທີ່ຂ້ອຍໃຊ້ຫຼາຍທີ່ສຸດ, ບໍ່ແມ່ນລາຍການທັງໝົດ.",
+    "frontend": {
+      "title": "Frontend",
+      "description": "Interface ທີ່ໄວ, ເຂົ້າເຖິງໄດ້ ແລະ ບຳລຸງຮັກສາໄດ້ ເມື່ອມັນຂະຫຍາຍໃຫຍ່ຂຶ້ນ."
+    },
+    "backend": {
+      "title": "Backend",
+      "description": "API ແລະ ບໍລິການທີ່ອອກແບບອ້ອມສັນຍາທີ່ຊັດເຈນ ແລະ ຄວາມຖືກຕ້ອງຂອງຂໍ້ມູນ."
+    },
+    "database": {
+      "title": "ຖານຂໍ້ມູນ",
+      "description": "ການສ້າງແບບ relational, migration ແລະ ປະສິດທິພາບ query."
+    },
+    "tools": {
+      "title": "ເຄື່ອງມື ແລະ ຂັ້ນຕອນເຮັດວຽກ",
+      "description": "ຊຸດເຄື່ອງມືປະຈຳວັນສຳລັບການ deploy ແລະ ຮ່ວມມືຢ່າງໝັ້ນໃຈ."
+    }
+  },
+  "services": {
+    "eyebrow": "ບໍລິການ",
+    "title": "ສິ່ງທີ່ຂ້ອຍສ້າງໄດ້",
+    "description": "ຈາກ interface ດຽວ ຮອດຜະລິດຕະພັນເຕັມຮູບແບບ — frontend, API ແລະ ຖານຂໍ້ມູນ ສົ່ງເປັນລະບົບດຽວ.",
+    "webApps": {
+      "title": "ແອັບພລິເຄຊັນເວັບ",
+      "description": "ແອັບທັນສະໄໝ responsive ດ້ວຍສະຖາປັດຕະຍະກຳ component ທີ່ສະອາດ, UI ທີ່ເຂົ້າເຖິງໄດ້ ແລະ ໂຫຼດໜ້າໄວ.",
+      "d1": "ຫ້ອງສະໝຸດ component",
+      "d2": "ໂຄງຮ່າງ responsive",
+      "d3": "ການຈັດການ state",
+      "d4": "SEO ແລະ metadata"
+    },
+    "fullStack": {
+      "title": "ແອັບ Full-Stack",
+      "description": "frontend, API ແລະ ຖານຂໍ້ມູນ ສົ່ງເປັນລະບົບດຽວທີ່ສອດຄ່ອງ ດ້ວຍ type ຮ່ວມກັນ ແລະ ຂອບເຂດທີ່ສົມເຫດສົມຜົນ.",
+      "d1": "ການສ້າງແບບຂໍ້ມູນ",
+      "d2": "Server routes / API",
+      "d3": "Auth ແລະ session",
+      "d4": "ການຕັ້ງຄ່າ deployment"
+    },
+    "dashboards": {
+      "title": "Dashboard ຜູ້ດູແລ",
+      "description": "ເຄື່ອງມືພາຍໃນລະດັບມືອາຊີບ ສຳລັບຈັດການເນື້ອຫາ, ຜູ້ໃຊ້ ແລະ ການດຳເນີນງານ — ຄົ້ນຫາໄດ້, ກັ່ນຕອງໄດ້, ຮັບຮູ້ສິດ.",
+      "d1": "ຂັ້ນຕອນ CRUD",
+      "d2": "ຕາຕະລາງ ແລະ ຕົວກັ່ນຕອງ",
+      "d3": "ການເຂົ້າເຖິງຕາມບົດບາດ",
+      "d4": "ຕາຕະລາງກຣາຟ ແລະ ການ export"
+    },
+    "apis": {
+      "title": "REST API",
+      "description": "API backend ທີ່ຂະຫຍາຍໄດ້ ດ້ວຍສັນຍາທີ່ຊັດເຈນ, ການກວດສອບ, ການຈັດການຂໍ້ຜິດພາດ ແລະ ເອກະສານ.",
+      "d1": "ການອອກແບບ endpoint",
+      "d2": "ການກວດສອບ input",
+      "d3": "Pagination ແລະ caching",
+      "d4": "ເອກະສານ OpenAPI"
+    }
+  },
+  "experience": {
+    "eyebrow": "ປະສົບການ",
+    "title": "ບ່ອນທີ່ຂ້ອຍໄດ້ຮຽນ ແລະ ສ້າງ",
+    "description": "ເສັ້ນເວລາຂອງການສຶກສາ, ວຽກ ແລະ ໂຄງການທີ່ຊຸກຍູ້ທັກສະຂອງຂ້ອຍ.",
+    "placeholderNote": "ລາຍການທີ່ໝາຍ [PLACEHOLDER] ໃນໄຟລ໌ຂໍ້ມູນແມ່ນແມ່ແບບ — ກະລຸນາປ່ຽນເປັນປະຫວັດຈິງຂອງທ່ານ.",
+    "kind": {
+      "work": "ວຽກ",
+      "education": "ການສຶກສາ",
+      "project": "ໂຄງການ"
+    },
+    "now": "ດຽວນີ້"
+  },
+  "projectsSection": {
+    "eyebrow": "ໂຄງການ",
+    "title": "ຜົນງານທີ່ຄັດເລືອກ",
+    "description": "ໂຄງການບາງອັນທີ່ສະແດງວິທີທີ່ຂ້ອຍເຂົ້າຫາສະຖາປັດຕະຍະກຳ, ຂໍ້ມູນ ແລະ interface. ແຕ່ລະອັນມີການຂຽນອະທິບາຍເຕັມ.",
+    "allProjects": "ໂຄງການທັງໝົດ",
+    "caseStudy": "ກໍລະນີສຶກສາ",
+    "code": "ໂຄ້ດ",
+    "live": "Live",
+    "readCaseStudy": "{title} — ອ່ານກໍລະນີສຶກສາ",
+    "visitProject": "{title} — ເບິ່ງໂຄງການ",
+    "onGithub": "{title} ຢູ່ GitHub",
+    "liveDemo": "{title} live demo"
+  },
+  "projectsPage": {
+    "eyebrow": "ໂຄງການ",
+    "title": "ສິ່ງທີ່ຂ້ອຍໄດ້ອອກແບບ ແລະ ສ້າງ",
+    "description": "ການປະສົມຂອງໂຄງການສຶກສາ, ການທົດລອງ open-source ແລະ ວຽກລູກຄ້າ. ແຕ່ລະບັດເຊື່ອມໄປຫາກໍລະນີສຶກສາທີ່ອະທິບາຍບັນຫາ, ສະຖາປັດຕະຍະກຳ ແລະ ສິ່ງທີ່ຂ້ອຍໄດ້ຮຽນ."
+  },
+  "projectDetail": {
+    "allProjects": "ໂຄງການທັງໝົດ",
+    "technologyStack": "ເຕັກໂນໂລຊີ",
+    "keyFeatures": "ຄຸນສົມບັດຫຼັກ",
+    "githubRepo": "GitHub repository",
+    "liveDemo": "Live demo",
+    "liveDemoButton": "Live Demo",
+    "viewCodeButton": "ເບິ່ງໂຄ້ດ",
+    "nextProject": "ໂຄງການຕໍ່ໄປ",
+    "previewAlt": "ຕົວຢ່າງ {title}"
+  },
+  "blogPage": {
+    "eyebrow": "ບລັອກ",
+    "title": "ຂຽນກ່ຽວກັບວິຊາຊີບ",
+    "description": "ບົດຄວາມສັ້ນໆ ໃຊ້ໄດ້ຈິງ ກ່ຽວກັບສິ່ງທີ່ຂ້ອຍພົບເມື່ອສ້າງດ້ວຍ Vue, Nuxt ແລະ Postgres.",
+    "filterLabel": "ກັ່ນຕອງບົດຄວາມຕາມໝວດ",
+    "filterAll": "ທັງໝົດ",
+    "empty": "ຍັງບໍ່ມີບົດຄວາມ — ກະລຸນາກັບມາເບິ່ງໃໝ່ໃນໄວໆນີ້.",
+    "minRead": "ອ່ານ {count} ນາທີ",
+    "readArticle": "ອ່ານບົດຄວາມ",
+    "readArticleAria": "{title} — ອ່ານບົດຄວາມ"
+  },
+  "blogDetail": {
+    "breadcrumb": "ບລັອກ",
+    "minRead": "ອ່ານ {count} ນາທີ",
+    "previous": "ກ່ອນໜ້າ",
+    "next": "ຕໍ່ໄປ",
+    "moreArticles": "ບົດຄວາມເພີ່ມເຕີມ",
+    "coverAlt": "ໜ້າປົກຂອງ {title}"
+  },
+  "contact": {
+    "eyebrow": "ຕິດຕໍ່",
+    "title": "ມາສ້າງບາງສິ່ງນຳກັນ.",
+    "intro": "ຂ້ອຍພ້ອມຮັບວຽກ freelance, ຝຶກງານ ແລະ ວຽກເຕັມເວລາ. ບອກຂ້ອຍວ່າທ່ານກຳລັງເຮັດຫຍັງ ແລ້ວຂ້ອຍຈະຕອບກັບ.",
+    "form": {
+      "name": "ຊື່",
+      "email": "ອີເມວ",
+      "subject": "ຫົວຂໍ້",
+      "message": "ຂໍ້ຄວາມ",
+      "namePlaceholder": "ຊື່ຂອງທ່ານ",
+      "emailPlaceholder": "you{'@'}example.com",
+      "subjectPlaceholder": "ກ່ຽວກັບຫຍັງ?",
+      "messagePlaceholder": "ບອກຂ້ອຍກ່ຽວກັບໂຄງການ, ໄລຍະເວລາ ແລະ ເປົ້າໝາຍຂອງທ່ານ…",
+      "send": "ສົ່ງຂໍ້ຄວາມ",
+      "sending": "ກຳລັງສົ່ງ…",
+      "preferEmail": "ມັກອີເມວ? ຕິດຕໍ່ຂ້ອຍໂດຍກົງທີ່",
+      "readyNote": "ຟອມນີ້ພ້ອມເຊື່ອມຕໍ່ກັບ API ອີເມວຜ່ານ",
+      "errNameRequired": "ກະລຸນາໃສ່ຊື່ຂອງທ່ານ.",
+      "errNameShort": "ຊື່ນີ້ສັ້ນເກີນໄປ.",
+      "errEmailRequired": "ກະລຸນາໃສ່ອີເມວຂອງທ່ານ.",
+      "errEmailInvalid": "ກະລຸນາໃສ່ອີເມວທີ່ຖືກຕ້ອງ.",
+      "errSubjectRequired": "ກະລຸນາເພີ່ມຫົວຂໍ້.",
+      "errSubjectShort": "ຫົວຂໍ້ສັ້ນເກີນໄປ.",
+      "errMessageRequired": "ກະລຸນາຂຽນຂໍ້ຄວາມ.",
+      "errMessageShort": "ລາຍລະອຽດເພີ່ມອີກໜ້ອຍໜຶ່ງຊ່ວຍໄດ້ — ຕ້ອງການອີກ {count} ຕົວອັກສອນ.",
+      "fixFields": "ກະລຸນາແກ້ໄຂຊ່ອງທີ່ໄຮໄລ້.",
+      "successReal": "ຂອບໃຈ — ຂໍ້ຄວາມຂອງທ່ານຖືກສົ່ງແລ້ວ. ຂ້ອຍຈະຕອບກັບໄວໆນີ້.",
+      "successDemo": "ຂອບໃຈ! ເວີຊັນສາທິດນີ້ຍັງບໍ່ໄດ້ເຊື່ອມກັບບໍລິການອີເມວ ແຕ່ຟອມເຮັດວຽກໄດ້.",
+      "genericError": "ມີບັນຫາໃນການສົ່ງຂໍ້ຄວາມຂອງທ່ານ. ກະລຸນາອີເມວຫາຂ້ອຍໂດຍກົງ.",
+      "validReady": "ພ້ອມສົ່ງ",
+      "validIncomplete": "ຍັງບໍ່ຄົບ"
+    }
+  },
+  "footer": {
+    "description": "{role} ທີ່ສ້າງແອັບພລິເຄຊັນເວັບທັນສະໄໝ ຂະຫຍາຍໄດ້ ດ້ວຍສະຖາປັດຕະຍະກຳທີ່ສະອາດ ແລະ ປະສົບການຜູ້ໃຊ້ທີ່ພິຖີພິຖັນ.",
+    "navigate": "ນຳທາງ",
+    "elsewhere": "ບ່ອນອື່ນ",
+    "rights": "© {year} {name}. ສະຫງວນລິຂະສິດ.",
+    "builtWith": "ສ້າງດ້ວຍ"
+  },
+  "error": {
+    "notFoundTitle": "ບໍ່ພົບໜ້ານີ້",
+    "genericTitle": "ມີບາງຢ່າງຜິດພາດ",
+    "notFoundBody": "ໜ້າທີ່ທ່ານກຳລັງຊອກຫາອາດຖືກຍ້າຍ ຫຼື ບໍ່ເຄີຍມີ.",
+    "genericBody": "ເກີດຂໍ້ຜິດພາດທີ່ບໍ່ຄາດຄິດ. ກະລຸນາລອງໃໝ່.",
+    "backHome": "ກັບໜ້າຫຼັກ",
+    "browseProjects": "ເບິ່ງໂຄງການ"
+  },
+  "meta": {
+    "homeDescription": "ນັກພັດທະນາ Full-Stack ທີ່ສ້າງແອັບພລິເຄຊັນເວັບທັນສະໄໝ ຂະຫຍາຍໄດ້ ແລະ ເນັ້ນຜູ້ໃຊ້ ດ້ວຍສະຖາປັດຕະຍະກຳທີ່ສະອາດ.",
+    "aboutTitle": "ກ່ຽວກັບ",
+    "aboutDescription": "ປະຫວັດ, ຫຼັກການພັດທະນາ, ປະສົບການ ແລະ ບໍລິການຂອງນັກພັດທະນາ full-stack ໃນລະບົບນິເວດ Vue ແລະ Nuxt.",
+    "projectsTitle": "ໂຄງການ",
+    "projectsDescription": "ໂຄງການ full-stack ທີ່ຄັດເລືອກ — ແພລດຟອມການຮຽນ, dashboard ແລະ API ສ້າງດ້ວຍ Nuxt, TypeScript ແລະ PostgreSQL.",
+    "blogTitle": "ບລັອກ",
+    "blogDescription": "ບັນທຶກກ່ຽວກັບ Vue, Nuxt, TypeScript, Node.js ແລະ PostgreSQL — ບົດຮຽນຈາກການສ້າງແອັບ full-stack.",
+    "contactTitle": "ຕິດຕໍ່",
+    "contactDescription": "ຕິດຕໍ່ກ່ຽວກັບວຽກ freelance, ຝຶກງານ ຫຼື ວຽກເຕັມເວລາ. ອີເມວ, GitHub, LinkedIn ແລະ ຟອມຕິດຕໍ່."
+  }
+}
+ 

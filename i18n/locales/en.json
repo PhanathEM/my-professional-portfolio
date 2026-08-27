@@ -1,0 +1,251 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "experience": "Experience",
+    "blog": "Blog",
+    "contact": "Contact"
+  },
+  "a11y": {
+    "skipToContent": "Skip to content",
+    "primaryNav": "Primary",
+    "footerNav": "Footer",
+    "toggleMenu": "Toggle navigation menu",
+    "changeTheme": "Change colour theme",
+    "changeLanguage": "Change language",
+    "home": "Home"
+  },
+  "theme": {
+    "system": "System",
+    "light": "Light",
+    "dark": "Dark"
+  },
+  "language": {
+    "label": "Language"
+  },
+  "profile": {
+    "intro": "Hello, I'm",
+    "role": "Full-Stack Developer",
+    "tagline": "I build modern, scalable and user-focused web applications with clean architecture and thoughtful user experiences.",
+    "availability": "Available for freelance & internship opportunities",
+    "location": "Phnom Penh, Cambodia",
+    "philosophy": "Good software is boring in the best way: predictable structure, honest naming, small components, and no cleverness that a teammate has to reverse-engineer at midnight. I optimise for the person who reads the code next.",
+    "learningJourney": "I started with plain HTML, CSS and JavaScript, moved through PHP and Laravel for backend fundamentals, then settled on TypeScript end to end. Each project on this site marks a step in that path — from first CRUD apps to typed, multi-service applications.",
+    "bio": {
+      "1": "I am a full-stack developer focused on the Vue and Nuxt ecosystem, with a strong interest in type-safe architecture, API design and interface craft.",
+      "2": "I enjoy the full arc of building a product — modelling the data, designing the API surface, and then shaping an interface that feels fast and effortless to use.",
+      "3": "Most of my work so far has been self-directed: study projects, open-source experiments and small client builds where I own the decision-making end to end."
+    },
+    "focus": {
+      "1": "Production-grade Nuxt 4 architecture and server routes",
+      "2": "PostgreSQL schema design and query performance",
+      "3": "Design systems with Tailwind CSS v4 tokens",
+      "4": "Testing strategy and CI for full-stack apps"
+    },
+    "stats": {
+      "projectsLabel": "Projects",
+      "projectsHint": "Shipped study & client builds",
+      "techLabel": "Technologies",
+      "techHint": "Languages, frameworks & tools",
+      "yearsLabel": "Years Learning",
+      "yearsHint": "Consistent, self-directed practice",
+      "focusLabel": "Current Focus",
+      "focusHint": "Full-stack TypeScript"
+    }
+  },
+  "hero": {
+    "viewWork": "View My Work",
+    "contactMe": "Contact Me"
+  },
+  "about": {
+    "eyebrow": "About",
+    "title": "A developer who cares about the details",
+    "description": "I build across the stack, but I'm happiest where data modelling meets interface craft.",
+    "basedIn": "Based in",
+    "status": "Status",
+    "openToWork": "Open to work",
+    "philosophyLabel": "development philosophy",
+    "currentFocus": "Current focus",
+    "learningJourney": "Learning journey",
+    "portraitAlt": "Portrait of {name}"
+  },
+  "skills": {
+    "eyebrow": "Skills",
+    "title": "Technologies I work with",
+    "description": "Grouped by where they sit in the stack — the tools I reach for most, not an exhaustive list.",
+    "frontend": {
+      "title": "Frontend",
+      "description": "Interfaces that stay fast, accessible and maintainable as they grow."
+    },
+    "backend": {
+      "title": "Backend",
+      "description": "APIs and services designed around clear contracts and data integrity."
+    },
+    "database": {
+      "title": "Database",
+      "description": "Relational modelling, migrations and query performance."
+    },
+    "tools": {
+      "title": "Tools & Workflow",
+      "description": "The everyday kit for shipping and collaborating with confidence."
+    }
+  },
+  "services": {
+    "eyebrow": "Services",
+    "title": "What I can build",
+    "description": "From a single interface to a full product — frontend, API and database, delivered as one system.",
+    "webApps": {
+      "title": "Web Applications",
+      "description": "Modern, responsive applications with clean component architecture, accessible UI and fast page loads.",
+      "d1": "Component library",
+      "d2": "Responsive layouts",
+      "d3": "State management",
+      "d4": "SEO & metadata"
+    },
+    "fullStack": {
+      "title": "Full-Stack Applications",
+      "description": "Frontend, API and database delivered as one coherent system with shared types and sensible boundaries.",
+      "d1": "Data modelling",
+      "d2": "Server routes / API",
+      "d3": "Auth & sessions",
+      "d4": "Deployment setup"
+    },
+    "dashboards": {
+      "title": "Admin Dashboards",
+      "description": "Professional internal tools for managing content, users and operations — searchable, filterable, permission-aware.",
+      "d1": "CRUD workflows",
+      "d2": "Tables & filters",
+      "d3": "Role-based access",
+      "d4": "Charts & exports"
+    },
+    "apis": {
+      "title": "REST APIs",
+      "description": "Scalable backend APIs with clear contracts, validation, error handling and documentation.",
+      "d1": "Endpoint design",
+      "d2": "Input validation",
+      "d3": "Pagination & caching",
+      "d4": "OpenAPI docs"
+    }
+  },
+  "experience": {
+    "eyebrow": "Experience",
+    "title": "Where I've been learning & building",
+    "description": "A timeline of study, work and the projects that pushed my skills forward.",
+    "placeholderNote": "Entries marked [PLACEHOLDER] in the data file are templates — replace with your real history.",
+    "kind": {
+      "work": "Work",
+      "education": "Education",
+      "project": "Project"
+    },
+    "now": "Now"
+  },
+  "projectsSection": {
+    "eyebrow": "Projects",
+    "title": "Selected work",
+    "description": "A few builds that show how I approach architecture, data and interface. Each has a full write-up.",
+    "allProjects": "All projects",
+    "caseStudy": "Case study",
+    "code": "Code",
+    "live": "Live",
+    "readCaseStudy": "{title} — read case study",
+    "visitProject": "{title} — visit project",
+    "onGithub": "{title} on GitHub",
+    "liveDemo": "{title} live demo"
+  },
+  "projectsPage": {
+    "eyebrow": "Projects",
+    "title": "Things I've designed and built",
+    "description": "A mix of study projects, open-source experiments and client work. Every card links to a written case study covering the problem, the architecture and what I learned."
+  },
+  "projectDetail": {
+    "allProjects": "All projects",
+    "technologyStack": "Technology Stack",
+    "keyFeatures": "Key Features",
+    "githubRepo": "GitHub repository",
+    "liveDemo": "Live demo",
+    "liveDemoButton": "Live Demo",
+    "viewCodeButton": "View Code",
+    "nextProject": "Next project",
+    "previewAlt": "{title} preview"
+  },
+  "blogPage": {
+    "eyebrow": "Blog",
+    "title": "Writing about the craft",
+    "description": "Short, practical write-ups on the things I run into while building with Vue, Nuxt and Postgres.",
+    "filterLabel": "Filter posts by category",
+    "filterAll": "All",
+    "empty": "No articles yet — check back soon.",
+    "minRead": "{count} min read",
+    "readArticle": "Read article",
+    "readArticleAria": "{title} — read article"
+  },
+  "blogDetail": {
+    "breadcrumb": "Blog",
+    "minRead": "{count} min read",
+    "previous": "Previous",
+    "next": "Next",
+    "moreArticles": "More articles",
+    "coverAlt": "{title} cover"
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Let's build something together.",
+    "intro": "I'm open to freelance work, internships and full-time roles. Tell me what you're working on and I'll get back to you.",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message",
+      "namePlaceholder": "Your name",
+      "emailPlaceholder": "you{'@'}example.com",
+      "subjectPlaceholder": "What's this about?",
+      "messagePlaceholder": "Tell me about your project, timeline and goals…",
+      "send": "Send Message",
+      "sending": "Sending…",
+      "preferEmail": "Prefer email? Reach me directly at",
+      "readyNote": "this form is ready to connect to an email API via",
+      "errNameRequired": "Please enter your name.",
+      "errNameShort": "That name looks too short.",
+      "errEmailRequired": "Please enter your email address.",
+      "errEmailInvalid": "Please enter a valid email address.",
+      "errSubjectRequired": "Please add a subject.",
+      "errSubjectShort": "The subject is too short.",
+      "errMessageRequired": "Please write a message.",
+      "errMessageShort": "A little more detail helps — {count} more characters.",
+      "fixFields": "Please fix the highlighted fields.",
+      "successReal": "Thanks — your message has been sent. I'll reply soon.",
+      "successDemo": "Thanks! This demo build isn't wired to an email service yet, but the form works.",
+      "genericError": "Something went wrong sending your message. Please email me directly.",
+      "validReady": "ready to send",
+      "validIncomplete": "incomplete"
+    }
+  },
+  "footer": {
+    "description": "{role} building modern, scalable web applications with clean architecture and thoughtful user experiences.",
+    "navigate": "Navigate",
+    "elsewhere": "Elsewhere",
+    "rights": "© {year} {name}. All rights reserved.",
+    "builtWith": "Built with"
+  },
+  "error": {
+    "notFoundTitle": "This page could not be found",
+    "genericTitle": "Something went wrong",
+    "notFoundBody": "The page you are looking for may have moved or never existed.",
+    "genericBody": "An unexpected error occurred. Please try again.",
+    "backHome": "Back home",
+    "browseProjects": "Browse projects"
+  },
+  "meta": {
+    "homeDescription": "Full-Stack Developer building modern, scalable and user-focused web applications with clean architecture and thoughtful user experiences.",
+    "aboutTitle": "About",
+    "aboutDescription": "Background, development philosophy, experience and services of a full-stack developer working in the Vue and Nuxt ecosystem.",
+    "projectsTitle": "Projects",
+    "projectsDescription": "Selected full-stack projects — learning platforms, dashboards and APIs built with Nuxt, TypeScript and PostgreSQL. Each with a full case study.",
+    "blogTitle": "Blog",
+    "blogDescription": "Notes on Vue, Nuxt, TypeScript, Node.js and PostgreSQL — lessons from building full-stack applications.",
+    "contactTitle": "Contact",
+    "contactDescription": "Get in touch about freelance work, internships or full-time roles. Email, GitHub, LinkedIn and a contact form."
+  }
+}

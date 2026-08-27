@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <pattern id="g" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.05"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="675" fill="#0f0f12"/>
+  <rect width="1200" height="675" fill="url(#g)"/>
+  <circle cx="300" cy="300" r="70" fill="none" stroke="#9276ff" stroke-width="3"/>
+  <circle cx="620" cy="420" r="70" fill="none" stroke="#9276ff" stroke-width="3"/>
+  <circle cx="900" cy="240" r="70" fill="none" stroke="#9276ff" stroke-width="3"/>
+  <line x1="300" y1="300" x2="620" y2="420" stroke="#6a3ff5" stroke-width="2"/>
+  <line x1="620" y1="420" x2="900" y2="240" stroke="#6a3ff5" stroke-width="2"/>
+  <text x="80" y="110" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="26" fill="#8b8b93">/ learning-platform</text>
+  <text x="80" y="600" font-family="Inter, system-ui, sans-serif" font-size="52" font-weight="600" fill="#ededef">Learning Platform</text>
+</svg>

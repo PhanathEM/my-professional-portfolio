@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <pattern id="g" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.05"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="675" fill="#0f0f12"/>
+  <rect width="1200" height="675" fill="url(#g)"/>
+  <g font-family="ui-monospace, Menlo, Consolas, monospace" font-size="24" fill="#a1a1aa">
+    <text x="80" y="230"><tspan fill="#9276ff">POST</tspan>   /v1/projects</text>
+    <text x="80" y="290"><tspan fill="#9276ff">GET</tspan>    /v1/projects/:id/tasks</text>
+    <text x="80" y="350"><tspan fill="#9276ff">PATCH</tspan>  /v1/tasks/:id</text>
+    <text x="80" y="410"><tspan fill="#9276ff">POST</tspan>   /v1/tasks/:id/comments</text>
+    <text x="80" y="470"><tspan fill="#9276ff">GET</tspan>    /v1/activity</text>
+  </g>
+  <rect x="76" y="200" width="4" height="288" fill="#6a3ff5"/>
+  <text x="80" y="110" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="26" fill="#8b8b93">/ task-manager-api</text>
+  <text x="80" y="600" font-family="Inter, system-ui, sans-serif" font-size="52" font-weight="600" fill="#ededef">Task Manager API</text>
+</svg>

@@ -1,0 +1,50 @@
+{
+  "name": "professional-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.24.0",
+  "engines": {
+    "node": ">=22.19.0"
+  },
+  "scripts": {
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "typecheck": "nuxt typecheck"
+  },
+  "dependencies": {
+    "@nuxt/content": "^3.15.2",
+    "@nuxt/fonts": "^0.14.0",
+    "@nuxt/icon": "^2.5.1",
+    "@nuxt/image": "^2.1.0",
+    "@nuxtjs/color-mode": "^4.0.1",
+    "@nuxtjs/i18n": "^10.6.0",
+    "@nuxtjs/seo": "^5.3.14",
+    "@vueuse/core": "^14.4.0",
+    "@vueuse/nuxt": "^14.4.0",
+    "motion-v": "^2.4.0",
+    "nuxt": "^4.5.2",
+    "vue": "^3.5.42"
+  },
+  "devDependencies": {
+    "@iconify-json/circle-flags": "^1.2.10",
+    "@iconify-json/lucide": "^1.2.126",
+    "@nuxt/eslint": "^1.17.0",
+    "@tailwindcss/vite": "^4.3.3",
+    "@takumi-rs/core": "^2.12.0",
+    "@takumi-rs/helpers": "^2.12.0",
+    "better-sqlite3": "^13.0.3",
+    "eslint": "^10.9.1",
+    "prettier": "^3.9.6",
+    "tailwindcss": "^4.3.3",
+    "typescript": "~5.9.3",
+    "vue-tsc": "^3.3.11"
+  }
+}

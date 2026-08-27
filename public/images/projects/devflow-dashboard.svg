@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <pattern id="g" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.05"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="675" fill="#0f0f12"/>
+  <rect width="1200" height="675" fill="url(#g)"/>
+  <rect x="80" y="180" width="1040" height="60" rx="8" fill="#17171b" stroke="#2a2a31"/>
+  <rect x="80" y="260" width="1040" height="44" rx="6" fill="#141418"/>
+  <rect x="80" y="316" width="1040" height="44" rx="6" fill="#141418"/>
+  <rect x="80" y="372" width="1040" height="44" rx="6" fill="#141418"/>
+  <rect x="80" y="428" width="1040" height="44" rx="6" fill="#141418"/>
+  <rect x="80" y="180" width="200" height="292" fill="#6a3ff5" fill-opacity="0.12"/>
+  <circle cx="1060" cy="210" r="8" fill="#9276ff"/>
+  <text x="80" y="110" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="26" fill="#8b8b93">/ devflow</text>
+  <text x="80" y="600" font-family="Inter, system-ui, sans-serif" font-size="52" font-weight="600" fill="#ededef">DevFlow Dashboard</text>
+</svg>
