@@ -30,7 +30,12 @@ onClickOutside(root, () => (open.value = false))
       :aria-label="t('a11y.changeLanguage')"
       @click="open = !open"
     >
-      <Icon :name="flagFor(current?.code ?? 'en')" :size="18" class="rounded-full" aria-hidden="true" />
+      <Icon
+        :name="flagFor(current?.code ?? 'en')"
+        :size="18"
+        class="rounded-full"
+        aria-hidden="true"
+      />
       <span class="hidden sm:inline">{{ current?.name }}</span>
       <Icon name="lucide:chevron-down" :size="14" class="opacity-60" aria-hidden="true" />
     </button>
@@ -57,7 +62,12 @@ onClickOutside(root, () => (open.value = false))
           :class="loc.code === locale && 'text-text'"
           @click="open = false"
         >
-          <Icon :name="flagFor(loc.code)" :size="18" class="shrink-0 rounded-full" aria-hidden="true" />
+          <Icon
+            :name="flagFor(loc.code)"
+            :size="18"
+            class="shrink-0 rounded-full"
+            aria-hidden="true"
+          />
           {{ loc.name }}
           <Icon
             v-if="loc.code === locale"

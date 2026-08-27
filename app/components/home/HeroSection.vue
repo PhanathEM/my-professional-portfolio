@@ -9,18 +9,16 @@ const step = 0.07
 
 <template>
   <section id="home" class="relative scroll-mt-24 overflow-hidden">
-    <!-- ambient background: one restrained radial + hairline grid -->
-    <div class="pointer-events-none absolute inset-0 -z-10" aria-hidden="true">
+    <!-- looping image backdrop + hairline grid for texture -->
+    <div class="pointer-events-none absolute inset-0 z-0" aria-hidden="true">
+      <HeroBackdrop />
       <div
-        class="absolute inset-0 [background-image:linear-gradient(var(--grid-line)_1px,transparent_1px),linear-gradient(90deg,var(--grid-line)_1px,transparent_1px)] [background-size:56px_56px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,black,transparent_75%)]"
-      />
-      <div
-        class="absolute left-1/2 top-[-10%] h-[36rem] w-[36rem] -translate-x-1/2 rounded-full opacity-[0.16] blur-3xl [background:radial-gradient(circle,var(--accent),transparent_65%)]"
+        class="absolute inset-0 opacity-40 [background-image:linear-gradient(var(--grid-line)_1px,transparent_1px),linear-gradient(90deg,var(--grid-line)_1px,transparent_1px)] [background-size:56px_56px] [mask-image:radial-gradient(ellipse_70%_60%_at_50%_0%,black,transparent_78%)]"
       />
     </div>
 
     <div
-      class="container-page grid items-center gap-14 pb-16 pt-20 md:pb-24 md:pt-28 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16"
+      class="container-page relative z-10 grid items-center gap-14 pb-16 pt-20 md:pb-24 md:pt-28 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16"
     >
       <div>
         <RevealOnScroll :y="10" :delay="0">

@@ -18,11 +18,7 @@ function toggle() {
       :aria-pressed="isDark"
       @click="toggle"
     >
-      <Icon
-        :name="isDark ? 'lucide:moon' : 'lucide:sun'"
-        :size="18"
-        aria-hidden="true"
-      />
+      <Icon :name="isDark ? 'lucide:moon' : 'lucide:sun'" :size="18" aria-hidden="true" />
     </button>
 
     <template #fallback>

@@ -56,6 +56,13 @@ Structure & links live in **`app/data/`**; all display copy lives in
 | `app/data/social.ts`     | GitHub / LinkedIn / email links                     |
 | `app/data/navigation.ts` | Nav + footer link structure (labels are i18n keys)  |
 
+**Hero background images** — `app/data/hero.ts` lists the images that crossfade
+behind the hero (looping, slow Ken-Burns drift, parallax on scroll, under a
+theme-aware scrim so the text stays readable). It ships pointing at the project
+cover SVGs as placeholders. Replace them with **real screenshots of your work**
+(dashboards, app UIs, deployed sites, code): drop files in
+`public/images/hero/`, list them in `hero.ts`, keep 3–6, landscape ≥ 1600px.
+
 Long-form content is Markdown in **`content/`**:
 
 - `content/projects/<slug>.md` → rendered at `/projects/<slug>`
