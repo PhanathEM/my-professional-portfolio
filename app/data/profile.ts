@@ -13,11 +13,12 @@ import type { Profile } from '~/types'
  * ---------------------------------------------------------------------------
  */
 export const profile: Profile = {
-  name: 'Phanath',
+  name: 'PHANATH EM',
   displayName: 'PHANATH',
   email: 'hello@phanath.dev', // [PLACEHOLDER] public contact email
   resumeUrl: '/resume.pdf', // [PLACEHOLDER] drop a PDF into /public to enable
-  avatar: '/images/avatar.svg', // [PLACEHOLDER] swap for a real photo (see /public/images)
+  logo: '/images/profile/profile.jpg', // brand mark in the navbar + footer
+  avatar: '/images/profile/profile.jpg', // portrait in the About section
 
   bioCount: 3, // paragraphs authored as profile.bio.1..3
   focusCount: 4, // bullets authored as profile.focus.1..4

@@ -12,11 +12,13 @@ const year = new Date().getFullYear()
     <div class="container-page grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr]">
       <div class="max-w-sm">
         <NuxtLinkLocale to="/" class="flex items-center gap-2.5">
-          <span
-            class="grid size-8 place-items-center rounded-md border border-border-strong bg-surface font-mono text-sm font-semibold text-accent"
-          >
-            {{ profile.name.charAt(0) }}
-          </span>
+          <NuxtImg
+            :src="profile.logo"
+            :alt="profile.name"
+            width="80"
+            height="80"
+            class="size-9 shrink-0 rounded-full object-cover object-top ring-1 ring-border-strong"
+          />
           <span class="text-[0.95rem] font-semibold tracking-tight">{{ profile.name }}</span>
         </NuxtLinkLocale>
         <p class="mt-4 text-sm/relaxed text-muted">

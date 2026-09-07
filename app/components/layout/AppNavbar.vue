@@ -39,11 +39,13 @@ const mobileOpen = ref(false)
         class="group flex items-center gap-2.5 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
         :aria-label="$t('a11y.home')"
       >
-        <span
-          class="grid size-8 place-items-center rounded-md border border-border-strong bg-surface font-mono text-sm font-semibold text-accent transition-colors group-hover:border-accent/50"
-        >
-          {{ profile.name.charAt(0) }}
-        </span>
+        <NuxtImg
+          :src="profile.logo"
+          :alt="profile.name"
+          width="80"
+          height="80"
+          class="size-9 shrink-0 rounded-full object-cover object-top ring-1 ring-border-strong transition-colors group-hover:ring-accent/50"
+        />
         <span class="text-[0.95rem] font-semibold tracking-tight">{{ profile.name }}</span>
       </NuxtLinkLocale>
 

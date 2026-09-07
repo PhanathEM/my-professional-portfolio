@@ -57,7 +57,14 @@
   },
   "hero": {
     "viewWork": "ເບິ່ງຜົນງານຂອງຂ້ອຍ",
-    "contactMe": "ຕິດຕໍ່ຂ້ອຍ"
+    "contactMe": "ຕິດຕໍ່ຂ້ອຍ",
+    "badgeChip": "ຫວ່າງ",
+    "features": {
+      "fullStack": "FULL-STACK",
+      "remote": "ເຮັດທາງໄກ",
+      "graduate": "ຈົບການສຶກສາ"
+    },
+    "builtWith": "ສ້າງດ້ວຍ"
   },
   "about": {
     "eyebrow": "ກ່ຽວກັບ",

@@ -56,7 +56,14 @@
   },
   "hero": {
     "viewWork": "View My Work",
-    "contactMe": "Contact Me"
+    "contactMe": "Contact Me",
+    "badgeChip": "Open",
+    "features": {
+      "fullStack": "FULL-STACK",
+      "remote": "REMOTE",
+      "graduate": "GRADUATE"
+    },
+    "builtWith": "BUILT WITH"
   },
   "about": {
     "eyebrow": "About",

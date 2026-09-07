@@ -28,7 +28,7 @@ const { t } = useI18n()
               :alt="t('about.portraitAlt', { name: profile.name })"
               width="360"
               height="440"
-              sizes="(max-width: 1024px) 18rem, 22rem"
+              sizes="(max-width: 1024px) 288px, 352px"
               class="aspect-4/5 w-full rounded-xl border border-border object-cover"
             />
             <dl

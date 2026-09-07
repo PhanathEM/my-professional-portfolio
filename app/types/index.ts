@@ -70,6 +70,9 @@ export interface Profile {
   displayName: string
   email: string
   resumeUrl?: string
+  /** Small square-ish photo used as the brand mark in the navbar / footer. */
+  logo: string
+  /** Portrait used in the About section. */
   avatar: string
   /** Number of bio paragraphs authored in i18n as `profile.bio.1..n`. */
   bioCount: number
