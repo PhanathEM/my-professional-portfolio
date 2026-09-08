@@ -55,6 +55,8 @@
      touching the button. */
   --cta-ink: var(--cta);
   --grid-line: color-mix(in oklab, #18181b 6%, transparent);
+  /* Tint behind the active navbar link. */
+  --nav-active: #f1f1f3;
 }
 
 .dark {
@@ -80,6 +82,7 @@
   --cta-contrast: #ffffff;
   --cta-ink: var(--cta);
   --grid-line: color-mix(in oklab, #ffffff 5%, transparent);
+  --nav-active: #1a1a1e;
 }
 
 /* ================================================================== *
@@ -106,6 +109,8 @@
   --color-cta-to: var(--cta-to);
   --color-cta-contrast: var(--cta-contrast);
   --color-cta-ink: var(--cta-ink);
+
+  --color-nav-active: var(--nav-active);
 
   --color-brand-50: var(--brand-50);
   --color-brand-100: var(--brand-100);

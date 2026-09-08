@@ -58,15 +58,14 @@ const mobileOpen = ref(false)
         <li v-for="item in navItems" :key="item.to">
           <NuxtLinkLocale
             :to="item.to"
-            class="relative rounded-md px-3 py-2 text-sm font-medium transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
-            :class="isActive(item) ? 'text-text' : 'text-muted hover:text-text'"
+            class="inline-flex h-8 items-center rounded px-3.5 text-sm font-medium transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+            :class="
+              isActive(item)
+                ? 'bg-nav-active text-cta-ink'
+                : 'text-muted hover:bg-bg-subtle hover:text-text'
+            "
           >
             {{ $t(item.label) }}
-            <span
-              v-if="isActive(item)"
-              class="absolute inset-x-3 -bottom-px h-px bg-accent"
-              aria-hidden="true"
-            />
           </NuxtLinkLocale>
         </li>
       </ul>
