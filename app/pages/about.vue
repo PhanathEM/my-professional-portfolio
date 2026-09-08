@@ -32,7 +32,6 @@ defineOgImageComponent('OgCard', {
     </header>
 
     <AboutSection />
-    <ExperienceSection />
     <ServicesSection />
   </div>
 </template>

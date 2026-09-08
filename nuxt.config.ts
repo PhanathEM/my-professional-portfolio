@@ -80,7 +80,7 @@ export default defineNuxtConfig({
     class: 'inline-block shrink-0',
     size: '20px',
     serverBundle: {
-      collections: ['lucide', 'circle-flags'],
+      collections: ['lucide'],
     },
   },
 
@@ -151,6 +151,8 @@ export default defineNuxtConfig({
         ...withLocales([
           '/',
           '/about',
+          '/skills',
+          '/experience',
           '/projects',
           '/blog',
           '/contact',

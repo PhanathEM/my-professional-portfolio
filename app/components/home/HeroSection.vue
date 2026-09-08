@@ -38,22 +38,8 @@ const techStrip = [
       class="container-page relative z-10 grid items-center gap-14 pb-10 pt-20 md:pt-24 lg:grid-cols-[1fr_1.05fr] lg:gap-12"
     >
       <div>
-        <!-- availability pill -->
-        <RevealOnScroll :y="10" :delay="0">
-          <span
-            class="inline-flex items-center gap-2 rounded-full border border-border bg-surface py-1 pl-1 pr-3.5 text-sm"
-          >
-            <span
-              class="rounded-full bg-accent px-2.5 py-0.5 text-xs font-semibold text-accent-contrast"
-            >
-              {{ t('hero.badgeChip') }}
-            </span>
-            <span class="text-muted">{{ t('profile.availability') }}</span>
-          </span>
-        </RevealOnScroll>
-
         <RevealOnScroll :y="14" :delay="step">
-          <h1 class="mt-5 text-5xl font-semibold tracking-tight text-text sm:text-6xl lg:text-7xl">
+          <h1 class="text-5xl font-semibold tracking-tight text-text sm:text-6xl lg:text-7xl">
             {{ profile.displayName }}
           </h1>
         </RevealOnScroll>
@@ -70,10 +56,10 @@ const techStrip = [
 
         <RevealOnScroll :y="12" :delay="step * 4">
           <div class="mt-8 flex flex-wrap items-center gap-3">
-            <AppButton to="/#projects" icon-right="lucide:arrow-right" size="lg">
+            <AppButton to="/projects" icon-right="lucide:arrow-right" size="lg">
               {{ t('hero.viewWork') }}
             </AppButton>
-            <AppButton to="/#contact" variant="secondary" size="lg">
+            <AppButton to="/contact" variant="secondary" size="lg">
               {{ t('hero.contactMe') }}
             </AppButton>
           </div>

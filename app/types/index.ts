@@ -15,9 +15,8 @@ export interface SocialLink {
 
 export interface NavItem {
   label: string
+  /** Route path, unprefixed — `useLocalePath()` adds the locale segment. */
   to: string
-  /** Section id used for scroll-spy on the landing page */
-  section?: string
 }
 
 export interface ProfileStat {

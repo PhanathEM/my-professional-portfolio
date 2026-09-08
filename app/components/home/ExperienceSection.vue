@@ -2,13 +2,25 @@
 import { experience } from '~/data/experience'
 
 const { t } = useI18n()
+
+/**
+ * `standalone` = this section IS the page (/skills, /experience) rather than a
+ * block inside one: its heading becomes the page's single <h1>, and the top
+ * border is dropped since there is nothing above it to divide from.
+ */
+withDefaults(defineProps<{ standalone?: boolean }>(), { standalone: false })
 </script>
 
 <template>
-  <section id="experience" class="section-pad scroll-mt-20 border-t border-border bg-bg-subtle">
+  <section
+    id="experience"
+    class="section-pad scroll-mt-20 bg-bg-subtle"
+    :class="standalone ? 'pt-24 md:pt-28' : 'border-t border-border'"
+  >
     <div class="container-page">
       <RevealOnScroll>
         <SectionHeading
+          :as="standalone ? 'h1' : 'h2'"
           :eyebrow="t('experience.eyebrow')"
           :title="t('experience.title')"
           :description="t('experience.description')"

@@ -44,7 +44,7 @@ onMounted(() => {
 
 <template>
   <div
-    class="hero-collage relative flex h-96 w-full min-w-0 gap-2 overflow-hidden sm:h-[28rem] sm:gap-2.5 lg:h-[34rem]"
+    class="hero-collage relative flex h-96 w-full min-w-0 gap-1 overflow-hidden sm:h-[28rem] sm:gap-1 lg:h-[34rem]"
     :class="{ 'hero-collage--paused': paused || reduced }"
   >
     <div
@@ -54,7 +54,7 @@ onMounted(() => {
       :class="c === 2 ? 'hidden sm:block' : ''"
     >
       <div
-        class="hero-col absolute inset-x-0 top-0 flex flex-col gap-2 sm:gap-2.5"
+        class="hero-col absolute inset-x-0 top-0 flex flex-col gap-1 sm:gap-1"
         :class="c === 1 ? 'hero-col--down' : 'hero-col--up'"
         :style="{ animationDuration: `${COLUMN_SECONDS[c]}s` }"
       >

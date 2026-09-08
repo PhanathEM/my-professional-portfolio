@@ -7,14 +7,18 @@ const localePath = useLocalePath()
 const { y } = useWindowScroll()
 const scrolled = computed(() => y.value > 12)
 
-const homePath = computed(() => localePath('/'))
-const isHome = computed(() => route.path === homePath.value)
-const sectionIds = navItems.filter((i) => i.section).map((i) => i.section!)
-const activeSection = useScrollSpy(sectionIds, { offset: 72 })
+/** Trailing slashes vary between SSR and client navigation — normalise both. */
+const trim = (path: string) => path.replace(/\/+$/, '') || '/'
 
+/**
+ * Home matches exactly; everything else also matches its children, so
+ * /projects/my-app keeps "Projects" highlighted.
+ */
 function isActive(item: (typeof navItems)[number]) {
-  if (item.to.startsWith('/#')) return isHome.value && activeSection.value === item.section
-  return route.path.startsWith(localePath(item.to))
+  const path = trim(route.path)
+  const target = trim(localePath(item.to))
+  if (item.to === '/') return path === target
+  return path === target || path.startsWith(`${target}/`)
 }
 
 const mobileOpen = ref(false)

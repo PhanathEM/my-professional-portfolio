@@ -187,6 +187,19 @@
  * Reusable component primitives
  * ================================================================== */
 @layer components {
+  /* ------------------------------------------------------------------ *
+   * Footer sticky reveal
+   * <main> is an opaque sheet (relative z-10 bg-bg) that scrolls over the
+   * footer, which is pinned to the bottom of the viewport behind it
+   * (sticky bottom-0 z-0). As main slides up, the footer is uncovered and
+   * animates from blurred + dim to sharp + bright (see AppFooter.vue).
+   * ------------------------------------------------------------------ */
+
+  /* Sticky needs an un-clipped ancestor chain. */
+  .footer-sticky-reveal {
+    overflow: visible;
+  }
+
   .container-page {
     width: 100%;
     max-width: 72rem;
@@ -246,6 +259,12 @@
   .page-leave-to {
     opacity: 0;
     transform: translateY(-8px);
+  }
+
+  /* Layers whose blur / brightness / offset are driven per-frame from
+     AppFooter.vue. Hinted so the browser keeps them on their own layer. */
+  .footer-reveal-layer {
+    will-change: filter, opacity, transform;
   }
 }
 
@@ -329,4 +348,37 @@
 }
 .prose-content hr {
   border-color: var(--border);
+}
+
+/* ================================================================== *
+ * Theme change ripple (View Transitions API)
+ *
+ * ThemeToggle.vue wraps the colour-mode swap in `startViewTransition()` and
+ * then animates a `clip-path: circle()` on the *new* snapshot, growing from
+ * the switch outwards. The default cross-fade is switched off so the circle
+ * is the only thing that moves; `plus-lighter` blending is dropped too, or
+ * the two snapshots wash each other out mid-wipe.
+ *
+ * Browsers without the API just repaint instantly — nothing here applies.
+ * ================================================================== */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+/* The outgoing theme sits still underneath while the new one opens over it. */
+::view-transition-old(root) {
+  z-index: 1;
+}
+::view-transition-new(root) {
+  z-index: 2;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(*),
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none !important;
+  }
 }

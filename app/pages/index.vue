@@ -18,11 +18,12 @@ useSeoMeta({
 <template>
   <div>
     <HeroSection />
-    <AboutSection />
-    <SkillsSection />
+    <!--
+      A landing page, not the whole site: About / Skills / Experience /
+      Contact each own a route now (see `app/data/navigation.ts`), so
+      repeating them here would just be the old one-page scroll again.
+      Featured projects stay as the one teaser that leads further in.
+    -->
     <FeaturedProjects />
-    <ExperienceSection />
-    <ServicesSection />
-    <ContactSection />
   </div>
 </template>

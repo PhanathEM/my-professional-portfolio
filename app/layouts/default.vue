@@ -3,10 +3,10 @@
 </script>
 
 <template>
-  <div class="flex min-h-dvh flex-col">
+  <div class="footer-sticky-reveal flex min-h-dvh flex-col">
     <AppNavbar />
 
-    <main id="main" class="flex-1">
+    <main id="main" class="relative z-10 flex-1 bg-bg">
       <slot />
     </main>
 

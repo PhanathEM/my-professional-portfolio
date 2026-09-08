@@ -2,13 +2,22 @@
 const { locale, locales, t } = useI18n()
 const switchLocalePath = useSwitchLocalePath()
 
-/** Flag icon per locale (Iconify `circle-flags` set, bundled at build time). */
+/**
+ * Real flag artwork from `public/images/flags/`. Plain <img> rather than
+ * <NuxtImg>: each file is already an optimised WebP under 5 KB, so putting it
+ * through the IPX pipeline would cost a request and save nothing.
+ */
 const FLAGS: Record<string, string> = {
-  en: 'circle-flags:uk',
-  km: 'circle-flags:kh',
-  lo: 'circle-flags:la',
+  en: '/images/flags/uk-flag.webp',
+  km: '/images/flags/khmer-flag.webp',
+  lo: '/images/flags/lao-flag.webp',
 }
-const flagFor = (code: string) => FLAGS[code] ?? 'circle-flags:un'
+const flagFor = (code: string) => FLAGS[code] ?? FLAGS.en!
+
+/** The three source images have different aspect ratios, so they are cropped
+ *  to one consistent 3:2 tile. The hairline ring keeps the white areas of the
+ *  Lao and Khmer flags from bleeding into a light surface. */
+const FLAG_CLASS = 'h-4 w-6 shrink-0 rounded-[3px] object-cover ring-1 ring-border-strong'
 
 const available = computed(() =>
   locales.value.map((l) => (typeof l === 'string' ? { code: l, name: l, language: l } : l)),
@@ -30,10 +39,12 @@ onClickOutside(root, () => (open.value = false))
       :aria-label="t('a11y.changeLanguage')"
       @click="open = !open"
     >
-      <Icon
-        :name="flagFor(current?.code ?? 'en')"
-        :size="18"
-        class="rounded-full"
+      <img
+        :src="flagFor(current?.code ?? 'en')"
+        alt=""
+        width="24"
+        height="16"
+        :class="FLAG_CLASS"
         aria-hidden="true"
       />
       <span class="hidden sm:inline">{{ current?.name }}</span>
@@ -62,10 +73,12 @@ onClickOutside(root, () => (open.value = false))
           :class="loc.code === locale && 'text-text'"
           @click="open = false"
         >
-          <Icon
-            :name="flagFor(loc.code)"
-            :size="18"
-            class="shrink-0 rounded-full"
+          <img
+            :src="flagFor(loc.code)"
+            alt=""
+            width="24"
+            height="16"
+            :class="FLAG_CLASS"
             aria-hidden="true"
           />
           {{ loc.name }}
