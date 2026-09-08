@@ -105,7 +105,7 @@ async function toggle() {
 }
 
 .theme-switch:hover {
-  border-color: color-mix(in oklab, var(--accent) 45%, transparent);
+  border-color: var(--border-hover);
 }
 
 .theme-switch:active {

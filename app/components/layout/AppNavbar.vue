@@ -48,7 +48,7 @@ const mobileOpen = ref(false)
           :alt="profile.name"
           width="80"
           height="80"
-          class="size-9 shrink-0 rounded-full object-cover object-top ring-1 ring-border-strong transition-colors group-hover:ring-accent/50"
+          class="size-8 shrink-0 rounded-full object-cover object-top ring-1 ring-border-strong transition-colors group-hover:ring-border-hover"
         />
         <span class="text-[0.95rem] font-semibold tracking-tight">{{ profile.name }}</span>
       </NuxtLinkLocale>

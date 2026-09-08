@@ -59,9 +59,8 @@
     "contactMe": "Contact Me",
     "badgeChip": "Open",
     "features": {
-      "fullStack": "FULL-STACK",
-      "remote": "REMOTE",
-      "graduate": "GRADUATE"
+      "fullStack": "Full-Stack Developer",
+      "openTo": "Open to opportunities"
     },
     "builtWith": "BUILT WITH"
   },

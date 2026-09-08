@@ -103,10 +103,12 @@ export default defineNuxtConfig({
   },
 
   // Self-hosts fonts at build time — no runtime request to Google.
-  // Inter for Latin; Noto Sans Khmer / Lao so km & lo render correctly.
+  // Inter for body Latin; Space Grotesk for display headings;
+  // Noto Sans Khmer / Lao so km & lo render correctly.
   fonts: {
     families: [
       { name: 'Inter', provider: 'google' },
+      { name: 'Space Grotesk', provider: 'google' },
       { name: 'Noto Sans Khmer', provider: 'google' },
       { name: 'Noto Sans Lao', provider: 'google' },
     ],

@@ -31,6 +31,9 @@
   --surface-elevated: #ffffff;
   --border: color-mix(in oklab, #18181b 12%, transparent);
   --border-strong: color-mix(in oklab, #18181b 20%, transparent);
+  /* One step past --border-strong: the grey a bordered control settles on
+     while hovered. Deliberately neutral — no accent tint. */
+  --border-hover: color-mix(in oklab, #18181b 30%, transparent);
   --text: #18181b;
   --text-muted: #52525b;
   --text-subtle: #71717a;
@@ -39,6 +42,18 @@
   --accent-contrast: #ffffff;
   --ring: var(--brand-500);
   --shadow-color: 220 40% 20%;
+  /* Call-to-action orange — the primary button only, independent of the
+     violet --accent that drives links, eyebrows and focus rings.
+     --cta is the anchor; the two ends are mixed from it, so retinting the
+     button is a one-value edit. */
+  --cta: #ff631c;
+  --cta-from: color-mix(in oklab, var(--cta) 92%, #ffc46b);
+  --cta-to: color-mix(in oklab, var(--cta) 91%, #c81e00);
+  --cta-contrast: #ffffff;
+  /* The orange as *text* on the page background, kept separate from the
+     button fill so it can be darkened for light-theme legibility without
+     touching the button. */
+  --cta-ink: var(--cta);
   --grid-line: color-mix(in oklab, #18181b 6%, transparent);
 }
 
@@ -50,6 +65,7 @@
   --surface-elevated: #17171b;
   --border: color-mix(in oklab, #ffffff 9%, transparent);
   --border-strong: color-mix(in oklab, #ffffff 16%, transparent);
+  --border-hover: color-mix(in oklab, #ffffff 26%, transparent);
   --text: #ededef;
   --text-muted: #a1a1aa;
   --text-subtle: #8b8b93;
@@ -58,6 +74,11 @@
   --accent-contrast: #0a0a0b;
   --ring: var(--brand-400);
   --shadow-color: 240 60% 3%;
+  --cta: #ff631c;
+  --cta-from: color-mix(in oklab, var(--cta) 92%, #ffc46b);
+  --cta-to: color-mix(in oklab, var(--cta) 91%, #c81e00);
+  --cta-contrast: #ffffff;
+  --cta-ink: var(--cta);
   --grid-line: color-mix(in oklab, #ffffff 5%, transparent);
 }
 
@@ -72,12 +93,19 @@
   --color-surface-elevated: var(--surface-elevated);
   --color-border: var(--border);
   --color-border-strong: var(--border-strong);
+  --color-border-hover: var(--border-hover);
   --color-text: var(--text);
   --color-muted: var(--text-muted);
   --color-subtle: var(--text-subtle);
   --color-accent: var(--accent);
   --color-accent-hover: var(--accent-hover);
   --color-accent-contrast: var(--accent-contrast);
+
+  --color-cta: var(--cta);
+  --color-cta-from: var(--cta-from);
+  --color-cta-to: var(--cta-to);
+  --color-cta-contrast: var(--cta-contrast);
+  --color-cta-ink: var(--cta-ink);
 
   --color-brand-50: var(--brand-50);
   --color-brand-100: var(--brand-100);
@@ -92,6 +120,11 @@
   --color-brand-950: var(--brand-950);
 
   --font-sans: 'Inter', sans-serif;
+  /* Display face for large headings. Noto sits ahead of Inter in the stack so
+     Khmer and Lao glyphs — which Space Grotesk does not carry — resolve to a
+     real font rather than a system fallback. Swap the first name to restyle
+     every display heading at once. */
+  --font-heading: 'Space Grotesk', 'Noto Sans Khmer', 'Noto Sans Lao', 'Inter', sans-serif;
   --font-mono:
     'JetBrains Mono', ui-monospace, 'SFMono-Regular', 'Menlo', 'Consolas', 'Liberation Mono',
     monospace;
@@ -259,6 +292,29 @@
   .page-leave-to {
     opacity: 0;
     transform: translateY(-8px);
+  }
+
+  /*
+   * Primary button fill. The ramp is mirrored (from → to → from) and the box
+   * is twice as wide as the button, so hovering slides it rather than trying
+   * to interpolate between two gradients — which CSS cannot animate.
+   */
+  .btn-cta {
+    background-image: linear-gradient(
+      115deg,
+      var(--cta-from) 0%,
+      var(--cta) 28%,
+      var(--cta-to) 50%,
+      var(--cta) 72%,
+      var(--cta-from) 100%
+    );
+    background-size: 220% 100%;
+    background-position: 0% 50%;
+    transition: background-position 0.55s var(--ease-out-expo);
+  }
+
+  .btn-cta:hover {
+    background-position: 100% 50%;
   }
 
   /* Layers whose blur / brightness / offset are driven per-frame from

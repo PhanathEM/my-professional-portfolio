@@ -22,7 +22,7 @@ withDefaults(
         :class="[
           size === 'sm' ? 'size-9' : 'size-10',
           variant === 'bordered' &&
-            'border border-border bg-surface hover:border-accent/40 hover:bg-surface-elevated',
+            'border border-border bg-surface hover:border-border-hover hover:bg-surface-elevated',
         ]"
       >
         <Icon :name="link.icon" :size="size === 'sm' ? 16 : 18" aria-hidden="true" />

@@ -60,9 +60,8 @@
     "contactMe": "ទាក់ទងខ្ញុំ",
     "badgeChip": "ទំនេរ",
     "features": {
-      "fullStack": "FULL-STACK",
-      "remote": "ធ្វើពីចម្ងាយ",
-      "graduate": "បញ្ចប់ការសិក្សា"
+      "fullStack": "អ្នកអភិវឌ្ឍន៍ Full-Stack",
+      "openTo": "បើកចំហសម្រាប់ឱកាស"
     },
     "builtWith": "បង្កើតដោយ"
   },

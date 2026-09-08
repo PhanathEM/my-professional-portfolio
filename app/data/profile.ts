@@ -14,7 +14,7 @@ import type { Profile } from '~/types'
  */
 export const profile: Profile = {
   name: 'PHANATH EM',
-  displayName: 'PHANATH',
+  displayName: 'PHANATH EM',
   email: 'hello@phanath.dev', // [PLACEHOLDER] public contact email
   resumeUrl: '/resume.pdf', // [PLACEHOLDER] drop a PDF into /public to enable
   logo: '/images/profile/profile.jpg', // brand mark in the navbar + footer

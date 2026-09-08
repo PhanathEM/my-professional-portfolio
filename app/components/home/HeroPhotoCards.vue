@@ -2,30 +2,42 @@
 import { heroImages } from '~/data/hero'
 
 /**
- * Hero visual: three vertical photo columns that scroll slowly and loop.
- *  - left column scrolls UP, middle scrolls DOWN, right scrolls UP
- *  - each column runs at a different speed so they never line up
+ * Full-bleed photo wall used as the hero background: vertical columns that
+ * scroll slowly and loop forever.
+ *  - columns alternate direction — 1st up, 2nd down, 3rd up, …
+ *  - each runs at its own speed so they never line up into a visible band
  *  - tiles vary in height, keeping the masonry feel
- *  - the grid is masked so it fades softly on all four edges (real
- *    transparency, so it never reads as a black/white cover in either theme)
+ *  - masked so it fades on all four edges (real transparency, so it reads
+ *    correctly on both themes)
  *
- * Freezes for `prefers-reduced-motion`; pauses while the tab is hidden.
+ * It fills its parent, so the parent decides the size. Freezes for
+ * `prefers-reduced-motion`; pauses while the tab is hidden.
  * Photos: `app/data/hero.ts` → `public/images/hero/`.
  */
 const reduced = usePrefersReducedMotion()
 
 /**
- * ⏱️ SPEED — seconds for one full loop of each column.
- * Bigger number = SLOWER.   [ left ↑ , middle ↓ , right ↑ ]
+ * ⏱️ SPEED — seconds for one full loop of each column, left to right.
+ * Bigger number = SLOWER.
  */
-const COLUMN_SECONDS = [100, 125, 150]
+const COLUMN_SECONDS = [100, 125, 150, 115, 140, 165]
+
+/** Narrow screens can't fit six columns; reveal them as width allows. */
+const COLUMN_VISIBILITY = [
+  '',
+  '',
+  'hidden sm:block',
+  'hidden lg:block',
+  'hidden lg:block',
+  'hidden xl:block',
+]
 
 const n = Math.max(heroImages.length, 1)
 const ASPECTS = ['aspect-3/4', 'aspect-square', 'aspect-4/5', 'aspect-3/4', 'aspect-4/5']
 
-// left ↑ · middle ↓ · right ↑ — each offset so the columns show different photos
+// Each column is offset into the photo list so no two show the same run.
 const columns = computed(() =>
-  [0, 1, 2].map((c) => {
+  COLUMN_SECONDS.map((_, c) => {
     const tiles = Array.from({ length: n }, (_, i) => ({
       img: heroImages[(i + c * 3) % n]!,
       aspect: ASPECTS[(i + c) % ASPECTS.length]!,
@@ -44,18 +56,18 @@ onMounted(() => {
 
 <template>
   <div
-    class="hero-collage relative flex h-96 w-full min-w-0 gap-1 overflow-hidden sm:h-[28rem] sm:gap-1 lg:h-[34rem]"
+    class="hero-collage relative flex h-full w-full min-w-0 gap-2 overflow-hidden sm:gap-2.5"
     :class="{ 'hero-collage--paused': paused || reduced }"
   >
     <div
       v-for="(col, c) in columns"
       :key="c"
       class="relative min-w-0 flex-1"
-      :class="c === 2 ? 'hidden sm:block' : ''"
+      :class="COLUMN_VISIBILITY[c]"
     >
       <div
-        class="hero-col absolute inset-x-0 top-0 flex flex-col gap-1 sm:gap-1"
-        :class="c === 1 ? 'hero-col--down' : 'hero-col--up'"
+        class="hero-col absolute inset-x-0 top-0 flex flex-col gap-2 sm:gap-2.5"
+        :class="c % 2 === 1 ? 'hero-col--down' : 'hero-col--up'"
         :style="{ animationDuration: `${COLUMN_SECONDS[c]}s` }"
       >
         <div
@@ -86,12 +98,12 @@ onMounted(() => {
  */
 .hero-collage {
   -webkit-mask-image:
-    linear-gradient(to right, transparent 0, black 3rem, black calc(100% - 3rem), transparent 100%),
-    linear-gradient(to bottom, transparent 0, black 3rem, black calc(100% - 3rem), transparent 100%);
+    linear-gradient(to right, transparent 0, black 4rem, black calc(100% - 4rem), transparent 100%),
+    linear-gradient(to bottom, transparent 0, black 4rem, black calc(100% - 5rem), transparent 100%);
   -webkit-mask-composite: source-in;
   mask-image:
-    linear-gradient(to right, transparent 0, black 3rem, black calc(100% - 3rem), transparent 100%),
-    linear-gradient(to bottom, transparent 0, black 3rem, black calc(100% - 3rem), transparent 100%);
+    linear-gradient(to right, transparent 0, black 4rem, black calc(100% - 4rem), transparent 100%),
+    linear-gradient(to bottom, transparent 0, black 4rem, black calc(100% - 5rem), transparent 100%);
   mask-composite: intersect;
 }
 
