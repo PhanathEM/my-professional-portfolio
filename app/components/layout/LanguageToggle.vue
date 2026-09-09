@@ -45,7 +45,7 @@ onClickOutside(root, () => (open.value = false))
   <div ref="root" class="relative">
     <button
       type="button"
-      class="inline-flex h-8 items-center gap-1.5 rounded-full border border-border bg-surface pl-1.5 pr-3 text-sm sm:w-[8.75rem] font-medium text-muted transition-colors duration-200 hover:border-border-hover hover:text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+      class="inline-flex h-8 items-center gap-1.5 rounded-full border border-border bg-surface pl-1.5 pr-3 text-sm sm:w-35 font-medium text-muted transition-colors duration-200 hover:border-border-hover hover:text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
       :aria-expanded="open"
       aria-haspopup="menu"
       :aria-label="t('a11y.changeLanguage')"
@@ -72,7 +72,7 @@ onClickOutside(root, () => (open.value = false))
       <div
         v-if="open"
         role="menu"
-        class="absolute right-0 z-50 mt-2 w-full min-w-[8.75rem] origin-top-right overflow-hidden rounded-lg border border-border bg-surface-elevated p-1 shadow-lift"
+        class="absolute right-0 z-50 mt-2 w-full min-w-35 origin-top-right overflow-hidden rounded-lg border border-border bg-surface-elevated p-1 shadow-lift"
       >
         <NuxtLink
           v-for="loc in available"
