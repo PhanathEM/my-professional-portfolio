@@ -150,7 +150,7 @@
     "eyebrow": "Projects",
     "title": "SELECTED WORK",
     "description": "A collection of digital products and full-stack applications I've designed and built.",
-    "allProjects": "All projects",
+    "allProjects": "All Projects",
     "caseStudy": "Case study",
     "code": "Code",
     "live": "Live",
@@ -165,7 +165,7 @@
     "description": "A mix of study projects, open-source experiments and client work. Every card links to a written case study covering the problem, the architecture and what I learned."
   },
   "projectDetail": {
-    "allProjects": "All projects",
+    "allProjects": "All Projects",
     "technologyStack": "Technology Stack",
     "keyFeatures": "Key Features",
     "githubRepo": "GitHub repository",

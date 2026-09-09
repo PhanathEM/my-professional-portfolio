@@ -16,7 +16,13 @@ const [lead, ...rest] = featuredProjects
             description-size="sm"
             title-size="sm"
           />
-          <AppButton to="/projects" variant="secondary" icon-right="lucide:arrow-right" size="sm">
+          <AppButton
+            to="/projects"
+            variant="secondary"
+            icon-right="lucide:arrow-right"
+            size="sm"
+            class="min-w-[7.5rem]"
+          >
             {{ t('projectsSection.allProjects') }}
           </AppButton>
         </div>
