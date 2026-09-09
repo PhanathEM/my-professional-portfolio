@@ -13,6 +13,8 @@ const [lead, ...rest] = featuredProjects
           <SectionHeading
             :title="t('projectsSection.title')"
             :description="t('projectsSection.description')"
+            description-size="sm"
+            title-size="sm"
           />
           <AppButton to="/projects" variant="secondary" icon-right="lucide:arrow-right" size="sm">
             {{ t('projectsSection.allProjects') }}

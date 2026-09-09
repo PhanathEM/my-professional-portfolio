@@ -6,8 +6,11 @@ withDefaults(
     description?: string
     align?: 'left' | 'center'
     as?: 'h2' | 'h1'
+    /** `sm` matches the button text size, for headings that sit beside one. */
+    descriptionSize?: 'sm' | 'base'
+    titleSize?: 'sm' | 'base'
   }>(),
-  { align: 'left', as: 'h2' },
+  { align: 'left', as: 'h2', descriptionSize: 'base', titleSize: 'base' },
 )
 </script>
 
@@ -24,12 +27,17 @@ withDefaults(
 
     <component
       :is="as"
-      class="text-balance text-3xl font-semibold tracking-tight text-text sm:text-4xl"
+      class="text-balance font-semibold tracking-tight text-text"
+      :class="titleSize === 'sm' ? 'text-sm sm:text-base' : 'text-3xl sm:text-4xl'"
     >
       {{ title }}
     </component>
 
-    <p v-if="description" class="mt-4 text-pretty text-base/relaxed text-muted sm:text-lg/relaxed">
+    <p
+      v-if="description"
+      class="mt-4 text-pretty text-muted"
+      :class="descriptionSize === 'sm' ? 'text-sm/relaxed' : 'text-base/relaxed sm:text-lg/relaxed'"
+    >
       {{ description }}
     </p>
   </div>
