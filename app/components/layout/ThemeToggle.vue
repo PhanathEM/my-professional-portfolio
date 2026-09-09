@@ -117,13 +117,21 @@ async function toggle() {
   outline-offset: 2px;
 }
 
-/* Slides across with a small overshoot so it lands rather than stops. */
+/*
+ * Slides across with a small overshoot so it lands rather than stops.
+ *
+ * Sized and inset to match the flag in LanguageToggle beside it, so the two
+ * controls read as siblings:
+ *   flag  : 20px circle, 1px border + 6px padding = 7px from the edge
+ *   thumb : 20px circle, 1px border + 6px margin  = 7px
+ * Travel of 22px leaves the same 6px clear on the right.
+ */
 .theme-switch__thumb {
   display: grid;
   place-items: center;
-  height: 1.5rem;
-  width: 1.5rem;
-  margin-left: 3px;
+  height: 1.25rem;
+  width: 1.25rem;
+  margin-left: 6px;
   border: 1px solid var(--border-strong);
   border-radius: 9999px;
   background: var(--surface-elevated);
@@ -132,7 +140,7 @@ async function toggle() {
 }
 
 .theme-switch.is-dark .theme-switch__thumb {
-  transform: translateX(1.5rem);
+  transform: translateX(1.375rem);
 }
 
 /* Sun and moon share one grid cell and rotate through each other. */

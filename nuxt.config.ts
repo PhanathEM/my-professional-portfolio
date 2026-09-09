@@ -153,8 +153,6 @@ export default defineNuxtConfig({
         ...withLocales([
           '/',
           '/about',
-          '/skills',
-          '/experience',
           '/projects',
           '/blog',
           '/contact',

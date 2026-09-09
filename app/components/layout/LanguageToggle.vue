@@ -96,8 +96,8 @@ onClickOutside(root, () => (open.value = false))
           {{ loc.name }}
           <Icon
             v-if="loc.code === locale"
-            name="lucide:check"
-            :size="13"
+            name="lucide:circle-check"
+            :size="15"
             class="ml-auto text-cta-ink"
             aria-hidden="true"
           />

@@ -2,25 +2,13 @@
 import { skillCategories } from '~/data/skills'
 
 const { t } = useI18n()
-
-/**
- * `standalone` = this section IS the page (/skills, /experience) rather than a
- * block inside one: its heading becomes the page's single <h1>, and the top
- * border is dropped since there is nothing above it to divide from.
- */
-withDefaults(defineProps<{ standalone?: boolean }>(), { standalone: false })
 </script>
 
 <template>
-  <section
-    id="skills"
-    class="section-pad scroll-mt-20 bg-bg-subtle"
-    :class="standalone ? 'pt-24 md:pt-28' : 'border-t border-border'"
-  >
+  <section id="skills" class="section-pad scroll-mt-20 border-t border-border bg-bg-subtle">
     <div class="container-page">
       <RevealOnScroll>
         <SectionHeading
-          :as="standalone ? 'h1' : 'h2'"
           :eyebrow="t('skills.eyebrow')"
           :title="t('skills.title')"
           :description="t('skills.description')"

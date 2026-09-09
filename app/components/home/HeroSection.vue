@@ -10,15 +10,6 @@ const features = [
   { icon: 'lucide:code-xml', key: 'hero.features.fullStack' },
   { icon: 'lucide:briefcase', key: 'hero.features.openTo' },
 ]
-
-const techStrip = [
-  { name: 'Nuxt', icon: 'lucide:mountain' },
-  { name: 'Vue', icon: 'lucide:component' },
-  { name: 'TypeScript', icon: 'lucide:file-code' },
-  { name: 'Tailwind CSS', icon: 'lucide:wind' },
-  { name: 'Node.js', icon: 'lucide:hexagon' },
-  { name: 'PostgreSQL', icon: 'lucide:database' },
-]
 </script>
 
 <template>
@@ -103,25 +94,6 @@ const techStrip = [
           <SocialLinks size="sm" />
         </div>
       </RevealOnScroll>
-    </div>
-
-    <!-- built-with strip -->
-    <div class="relative z-10 border-t border-border/60">
-      <div class="container-page py-7">
-        <p class="font-mono text-[0.68rem] font-medium tracking-[0.18em] text-subtle uppercase">
-          {{ t('hero.builtWith') }}
-        </p>
-        <ul class="mt-4 flex flex-wrap items-center gap-x-8 gap-y-4">
-          <li
-            v-for="tech in techStrip"
-            :key="tech.name"
-            class="flex items-center gap-2 text-muted opacity-70 transition-opacity duration-200 hover:opacity-100"
-          >
-            <Icon :name="tech.icon" :size="18" aria-hidden="true" />
-            <span class="text-sm font-semibold tracking-tight">{{ tech.name }}</span>
-          </li>
-        </ul>
-      </div>
     </div>
   </section>
 </template>
