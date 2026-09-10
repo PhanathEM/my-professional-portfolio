@@ -9,7 +9,7 @@ useSeoMeta({
   ogTitle: () => `${t('meta.aboutTitle')} · ${profile.displayName}`,
 })
 
-defineOgImageComponent('OgCard', {
+defineOgImage('OgCard', {
   label: t('meta.aboutTitle'),
   title: `${t('meta.aboutTitle')} ${profile.displayName}`,
   description: t('profile.role'),

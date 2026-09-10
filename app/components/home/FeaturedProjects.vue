@@ -2,7 +2,13 @@
 import { featuredProjects } from '~/data/projects'
 
 const { t } = useI18n()
-const [lead, ...rest] = featuredProjects
+
+/**
+ * Same grid as `/projects`, just limited to the featured set. Four across when
+ * a fourth project is marked featured, so the row fills instead of leaving an
+ * orphan on a second line.
+ */
+const columns = computed<3 | 4>(() => (featuredProjects.length >= 4 ? 4 : 3))
 </script>
 
 <template>
@@ -16,25 +22,22 @@ const [lead, ...rest] = featuredProjects
             description-size="sm"
             title-size="sm"
           />
-          <AppButton
+          <NuxtLinkLocale
             to="/projects"
-            variant="secondary"
-            icon-right="lucide:arrow-right"
-            size="sm"
-            class="min-w-[7.5rem]"
+            class="inline-flex shrink-0 items-center gap-1.5 text-sm text-muted transition-colors hover:text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
           >
             {{ t('projectsSection.allProjects') }}
-          </AppButton>
+            <Icon
+              name="lucide:arrow-right"
+              :size="15"
+              class="transition-transform duration-300"
+              aria-hidden="true"
+            />
+          </NuxtLinkLocale>
         </div>
       </RevealOnScroll>
 
-      <div class="mt-14 space-y-5">
-        <RevealOnScroll v-if="lead" :y="20">
-          <ProjectCard :project="lead" featured />
-        </RevealOnScroll>
-
-        <ProjectGrid v-if="rest.length" :projects="rest" />
-      </div>
+      <ProjectGrid class="mt-10" :projects="featuredProjects" :columns="columns" />
     </div>
   </section>
 </template>

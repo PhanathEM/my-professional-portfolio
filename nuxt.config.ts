@@ -85,6 +85,20 @@ export default defineNuxtConfig({
   },
 
   content: {
+    // Use Node's built-in SQLite (v22.5+; this project runs v24) instead of the
+    // `better-sqlite3` native addon.
+    //
+    // BOTH flags are set on purpose. `sqliteConnector` is the current option,
+    // but @nuxt/content 3.15's dev path calls
+    //   getLocalDatabase(db, { nativeSqlite: options.experimental?.nativeSqlite })
+    // while the function destructures `{ connector, sqliteConnector }` — so the
+    // new option is silently dropped for the dev database and only the
+    // deprecated flag is read there.
+    experimental: {
+      nativeSqlite: true,
+      sqliteConnector: 'native',
+    },
+
     build: {
       markdown: {
         highlight: {
@@ -103,12 +117,15 @@ export default defineNuxtConfig({
   },
 
   // Self-hosts fonts at build time — no runtime request to Google.
-  // Inter for body Latin; Space Grotesk for display headings;
+  // Inter (variable) for all Latin text;
   // Noto Sans Khmer / Lao so km & lo render correctly.
   fonts: {
     families: [
-      { name: 'Inter', provider: 'google' },
-      { name: 'Space Grotesk', provider: 'google' },
+      // A weight RANGE (not a list) pulls the variable Inter file — one
+      // download that covers every weight, instead of four static cuts.
+      { name: 'Inter', provider: 'google', weights: ['100 900'] },
+      // Display face for the hero name only. Variable (wght 400-700).
+      { name: 'Edu AU VIC WA NT Arrows', provider: 'google', weights: ['400 700'] },
       { name: 'Noto Sans Khmer', provider: 'google' },
       { name: 'Noto Sans Lao', provider: 'google' },
     ],

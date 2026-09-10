@@ -48,7 +48,7 @@ useSeoMeta({
   articlePublishedTime: () => doc.value?.date,
 })
 
-defineOgImageComponent('OgCard', {
+defineOgImage('OgCard', {
   label: doc.value.category,
   title: doc.value.title,
   description: doc.value.description,

@@ -159,21 +159,40 @@
     "onGithub": "{title} on GitHub",
     "liveDemo": "{title} live demo"
   },
+  "blogSection": {
+    "title": "LATEST WRITING",
+    "description": "Short, practical notes on things I run into while building.",
+    "allPosts": "All Posts"
+  },
   "projectsPage": {
     "eyebrow": "Projects",
-    "title": "Things I've designed and built",
-    "description": "A mix of study projects, open-source experiments and client work. Every card links to a written case study covering the problem, the architecture and what I learned."
+    "title": "ALL PROJECTS I'VE DESIGNED AND BUILT",
+    "description": "A mix of study projects, open-source experiments and client work. Every card links to a written case study covering the problem, the architecture and what I learned.",
+    "searchLabel": "Search projects",
+    "searchPlaceholder": "Search by name, tech or role…",
+    "clearSearch": "Clear search",
+    "resultCount": "{count} of {total} projects",
+    "noResults": "No projects match “{query}”.",
+    "filterLabel": "Filter projects by technology",
+    "filterAll": "All"
+  },
+  "pagination": {
+    "label": "Pagination",
+    "previous": "Previous page",
+    "next": "Next page",
+    "page": "Page {page}"
   },
   "projectDetail": {
     "allProjects": "All Projects",
     "technologyStack": "Technology Stack",
     "keyFeatures": "Key Features",
-    "githubRepo": "GitHub repository",
+    "githubRepo": "Source Code",
     "liveDemo": "Live demo",
     "liveDemoButton": "Live Demo",
     "viewCodeButton": "View Code",
     "nextProject": "Next project",
-    "previewAlt": "{title} preview"
+    "previewAlt": "{title} preview",
+    "relatedProjects": "Related Projects"
   },
   "blogPage": {
     "eyebrow": "Blog",

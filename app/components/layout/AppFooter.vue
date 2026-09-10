@@ -84,7 +84,7 @@ const rule = (startAt: number) => ({ transform: `scaleX(${layer(startAt).toFixed
             height="80"
             class="size-9 shrink-0 rounded-full object-cover object-top ring-1 ring-border-strong"
           />
-          <span class="text-[0.95rem] font-semibold tracking-tight">{{ profile.name }}</span>
+          <span class="text-sm font-semibold tracking-tight">{{ profile.name }}</span>
         </NuxtLinkLocale>
         <p class="mt-4 text-sm/relaxed text-muted">
           {{ t('footer.description', { role: t('profile.role') }) }}

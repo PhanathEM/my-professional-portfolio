@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <pattern id="g" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.05"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="675" fill="#0f0f12"/>
+  <rect width="1200" height="675" fill="url(#g)"/>
+  <g fill="#6a3ff5" opacity="0.85">
+    <rect x="360" y="380" width="60" height="110" rx="6"/>
+    <rect x="450" y="320" width="60" height="170" rx="6"/>
+    <rect x="540" y="250" width="60" height="240" rx="6"/>
+    <rect x="630" y="330" width="60" height="160" rx="6"/>
+    <rect x="720" y="290" width="60" height="200" rx="6"/>
+  </g>
+  <path d="M390 360 L480 300 L570 230 L660 310 L750 270" fill="none" stroke="#9276ff" stroke-width="3"/>
+  <text x="80" y="110" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="26" fill="#8b8b93">/ expense-tracker</text>
+  <text x="80" y="600" font-family="Inter, system-ui, sans-serif" font-size="52" font-weight="600" fill="#ededef">Expense Tracker</text>
+</svg>

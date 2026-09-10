@@ -44,7 +44,7 @@ const features = [
     >
       <RevealOnScroll :y="14" :delay="step">
         <h1
-          class="font-heading text-5xl font-bold tracking-[-0.035em] text-text sm:text-6xl lg:text-7xl"
+          class="font-brand text-6xl font-normal tracking-normal text-text sm:text-7xl lg:text-8xl"
         >
           {{ profile.displayName }}
         </h1>

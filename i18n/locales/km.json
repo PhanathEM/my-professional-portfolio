@@ -160,21 +160,40 @@
     "onGithub": "{title} នៅលើ GitHub",
     "liveDemo": "{title} live demo"
   },
+  "blogSection": {
+    "title": "អត្ថបទថ្មីៗ",
+    "description": "កំណត់ត្រាខ្លីៗ និងជាក់ស្ដែងអំពីអ្វីដែលខ្ញុំជួបប្រទះពេលកសាង។",
+    "allPosts": "អត្ថបទទាំងអស់"
+  },
   "projectsPage": {
     "eyebrow": "គម្រោង",
     "title": "អ្វីៗដែលខ្ញុំបានរចនា និងបង្កើត",
-    "description": "ការលាយបញ្ចូលគ្នានៃគម្រោងសិក្សា ការពិសោធន៍ open-source និងការងារអតិថិជន។ កាតនីមួយៗភ្ជាប់ទៅករណីសិក្សាដែលនិយាយអំពីបញ្ហា ស្ថាបត្យកម្ម និងអ្វីដែលខ្ញុំបានរៀន។"
+    "description": "ការលាយបញ្ចូលគ្នានៃគម្រោងសិក្សា ការពិសោធន៍ open-source និងការងារអតិថិជន។ កាតនីមួយៗភ្ជាប់ទៅករណីសិក្សាដែលនិយាយអំពីបញ្ហា ស្ថាបត្យកម្ម និងអ្វីដែលខ្ញុំបានរៀន។",
+    "searchLabel": "ស្វែងរកគម្រោង",
+    "searchPlaceholder": "ស្វែងរកតាមឈ្មោះ បច្ចេកវិទ្យា ឬតួនាទី…",
+    "clearSearch": "សម្អាតការស្វែងរក",
+    "resultCount": "គម្រោង {count} ក្នុងចំណោម {total}",
+    "noResults": "រកមិនឃើញគម្រោងដែលត្រូវនឹង «{query}» ទេ។",
+    "filterLabel": "ត្រងគម្រោងតាមបច្ចេកវិទ្យា",
+    "filterAll": "ទាំងអស់"
+  },
+  "pagination": {
+    "label": "ការបែងចែកទំព័រ",
+    "previous": "ទំព័រមុន",
+    "next": "ទំព័របន្ទាប់",
+    "page": "ទំព័រ {page}"
   },
   "projectDetail": {
     "allProjects": "គម្រោងទាំងអស់",
     "technologyStack": "បច្ចេកវិទ្យា",
     "keyFeatures": "លក្ខណៈសំខាន់ៗ",
-    "githubRepo": "ឃ្លាំង GitHub",
+    "githubRepo": "កូដប្រភព",
     "liveDemo": "Live demo",
     "liveDemoButton": "Live Demo",
     "viewCodeButton": "មើលកូដ",
     "nextProject": "គម្រោងបន្ទាប់",
-    "previewAlt": "ការមើលមុន {title}"
+    "previewAlt": "ការមើលមុន {title}",
+    "relatedProjects": "គម្រោងពាក់ព័ន្ធ"
   },
   "blogPage": {
     "eyebrow": "ប្លុក",

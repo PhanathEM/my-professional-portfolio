@@ -5,11 +5,13 @@ const { t } = useI18n()
 </script>
 
 <template>
-  <section id="contact" class="section-pad scroll-mt-20 border-t border-border bg-bg-subtle">
+  <section id="contact" class="section-pad scroll-mt-20">
     <div class="container-page">
       <div class="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
         <RevealOnScroll>
-          <SectionHeading :eyebrow="t('contact.eyebrow')" :title="t('contact.title')" />
+          <!-- `as="h1"`: this section is the whole /contact page now, so its
+               heading is the page's top-level one. -->
+          <SectionHeading as="h1" :eyebrow="t('contact.eyebrow')" :title="t('contact.title')" />
           <p class="mt-5 max-w-md text-pretty text-base/relaxed text-muted">
             {{ t('contact.intro') }}
           </p>

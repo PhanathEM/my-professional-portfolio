@@ -1,0 +1,26 @@
+diff --git a/dist/module.cjs b/dist/module.cjs
+index c79b7c9ebecdc43d12da98565aff92e10411851c..8a62ed2458b99505d4f8541f920ded7ccf5d22b1 100644
+--- a/dist/module.cjs	
++++ b/dist/module.cjs	
+@@ -1630,7 +1630,7 @@ const fullDatabaseCompressedDumpTemplate = (manifest) => ({
+     const result = [];
+     for (const [key, dump] of Object.entries(options.manifest.dump)) {
+       if (options.manifest.collections.find((c) => c.name === key)?.private) {
+-        return "";
++        continue;
+       }
+       const compressedDump = await compress(JSON.stringify(dump));
+       result.push(`export const ${key} = "${compressedDump}"`);
+diff --git a/dist/module.mjs b/dist/module.mjs
+index ce30b27d426588cbeb4fb04415bfe5747ac23548..cf794fc9f65435b19a38355e90f6932a601fb3b7 100644
+--- a/dist/module.mjs	
++++ b/dist/module.mjs	
+@@ -1611,7 +1611,7 @@ const fullDatabaseCompressedDumpTemplate = (manifest) => ({
+     const result = [];
+     for (const [key, dump] of Object.entries(options.manifest.dump)) {
+       if (options.manifest.collections.find((c) => c.name === key)?.private) {
+-        return "";
++        continue;
+       }
+       const compressedDump = await compress(JSON.stringify(dump));
+       result.push(`export const ${key} = "${compressedDump}"`);

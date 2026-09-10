@@ -3,7 +3,7 @@ import { profile } from '~/data/profile'
 
 const { t } = useI18n()
 
-defineOgImageComponent('OgCard', {
+defineOgImage('OgCard', {
   title: profile.displayName,
   description: t('profile.role'),
 })
@@ -25,5 +25,6 @@ useSeoMeta({
       Featured projects stay as the one teaser that leads further in.
     -->
     <FeaturedProjects />
+    <LatestPosts />
   </div>
 </template>

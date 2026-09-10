@@ -26,7 +26,7 @@ useSeoMeta({
 })
 
 // Site-wide default OG image; individual pages override with their own title/description.
-defineOgImageComponent('OgCard', {
+defineOgImage('OgCard', {
   title: profile.displayName,
   description: profile.name,
 })

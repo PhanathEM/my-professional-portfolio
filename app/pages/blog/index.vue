@@ -37,7 +37,7 @@ useSeoMeta({
   ogTitle: () => `${t('meta.blogTitle')} · Phanath`,
 })
 
-defineOgImageComponent('OgCard', {
+defineOgImage('OgCard', {
   label: t('blogPage.eyebrow'),
   title: t('blogPage.title'),
   description: t('meta.blogDescription'),

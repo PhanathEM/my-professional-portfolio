@@ -25,16 +25,16 @@
   --brand-950: #26154f;
 
   /* --- Semantic tokens: LIGHT theme (default) --- */
-  --bg: #fbfbfc;
+  --bg: #ffffff;
   --bg-subtle: #f4f4f6;
   --surface: #ffffff;
   --surface-elevated: #ffffff;
-  --border: color-mix(in oklab, #18181b 12%, transparent);
-  --border-strong: color-mix(in oklab, #18181b 20%, transparent);
+  --border: color-mix(in oklab, #191919 12%, transparent);
+  --border-strong: color-mix(in oklab, #191919 20%, transparent);
   /* One step past --border-strong: the grey a bordered control settles on
      while hovered. Deliberately neutral — no accent tint. */
-  --border-hover: color-mix(in oklab, #18181b 30%, transparent);
-  --text: #18181b;
+  --border-hover: color-mix(in oklab, #191919 30%, transparent);
+  --text: #191919;
   --text-muted: #52525b;
   --text-subtle: #71717a;
   --accent: var(--brand-600);
@@ -54,7 +54,7 @@
      button fill so it can be darkened for light-theme legibility without
      touching the button. */
   --cta-ink: var(--cta);
-  --grid-line: color-mix(in oklab, #18181b 6%, transparent);
+  --grid-line: color-mix(in oklab, #191919 6%, transparent);
   /* Tint behind the active navbar link. */
   --nav-active: #f1f1f3;
 }
@@ -124,12 +124,17 @@
   --color-brand-900: var(--brand-900);
   --color-brand-950: var(--brand-950);
 
-  --font-sans: 'Inter', sans-serif;
-  /* Display face for large headings. Noto sits ahead of Inter in the stack so
-     Khmer and Lao glyphs — which Space Grotesk does not carry — resolve to a
-     real font rather than a system fallback. Swap the first name to restyle
-     every display heading at once. */
-  --font-heading: 'Space Grotesk', 'Noto Sans Khmer', 'Noto Sans Lao', 'Inter', sans-serif;
+  /* Inter (variable) everywhere. Noto follows it in the stack so Khmer and Lao
+     glyphs — which Inter does not carry — resolve per-glyph to a real font
+     instead of a system fallback. Swap the first name to restyle the whole
+     site at once. */
+  --font-sans: 'Inter', 'Noto Sans Khmer', 'Noto Sans Lao', sans-serif;
+  /* Kept as its own token so headings can diverge later without touching body
+     text; identical for now. */
+  --font-heading: var(--font-sans);
+  /* Display face, hero name only. Inter follows it so the fallback while it
+     loads is a real font rather than a system default. */
+  --font-brand: 'Edu AU VIC WA NT Arrows', 'Inter', cursive;
   --font-mono:
     'JetBrains Mono', ui-monospace, 'SFMono-Regular', 'Menlo', 'Consolas', 'Liberation Mono',
     monospace;
@@ -166,7 +171,7 @@
     font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
   }
 
-  /* Inter has no Khmer / Lao glyphs — load the matching Noto face per locale. */
+  /* Inter has no Khmer / Lao glyphs — put the matching Noto face first per locale. */
   :lang(km) {
     --font-sans: 'Noto Sans Khmer', 'Inter', sans-serif;
     font-feature-settings: normal;
@@ -361,6 +366,16 @@
   text-decoration: underline;
   text-underline-offset: 3px;
   text-decoration-thickness: 1px;
+}
+
+/*
+ * Nuxt Content wraps each heading in an anchor so it can be deep-linked. That
+ * anchor was inheriting the link colour and underline above, which made every
+ * "## Heading" render as a violet underlined link instead of a heading.
+ */
+.prose-content :is(h1, h2, h3, h4) a {
+  color: inherit;
+  text-decoration: none;
 }
 .prose-content strong {
   color: var(--text);

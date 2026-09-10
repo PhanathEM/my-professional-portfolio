@@ -160,21 +160,40 @@
     "onGithub": "{title} ຢູ່ GitHub",
     "liveDemo": "{title} live demo"
   },
+  "blogSection": {
+    "title": "ບົດຄວາມຫຼ້າສຸດ",
+    "description": "ບັນທຶກສັ້ນໆ ແລະ ໃຊ້ໄດ້ຈິງ ກ່ຽວກັບສິ່ງທີ່ຂ້ອຍພົບໃນລະຫວ່າງການສ້າງ.",
+    "allPosts": "ບົດຄວາມທັງໝົດ"
+  },
   "projectsPage": {
     "eyebrow": "ໂຄງການ",
     "title": "ສິ່ງທີ່ຂ້ອຍໄດ້ອອກແບບ ແລະ ສ້າງ",
-    "description": "ການປະສົມຂອງໂຄງການສຶກສາ, ການທົດລອງ open-source ແລະ ວຽກລູກຄ້າ. ແຕ່ລະບັດເຊື່ອມໄປຫາກໍລະນີສຶກສາທີ່ອະທິບາຍບັນຫາ, ສະຖາປັດຕະຍະກຳ ແລະ ສິ່ງທີ່ຂ້ອຍໄດ້ຮຽນ."
+    "description": "ການປະສົມຂອງໂຄງການສຶກສາ, ການທົດລອງ open-source ແລະ ວຽກລູກຄ້າ. ແຕ່ລະບັດເຊື່ອມໄປຫາກໍລະນີສຶກສາທີ່ອະທິບາຍບັນຫາ, ສະຖາປັດຕະຍະກຳ ແລະ ສິ່ງທີ່ຂ້ອຍໄດ້ຮຽນ.",
+    "searchLabel": "ຄົ້ນຫາໂຄງການ",
+    "searchPlaceholder": "ຄົ້ນຫາຕາມຊື່ ເຕັກໂນໂລຊີ ຫຼື ບົດບາດ…",
+    "clearSearch": "ລ້າງການຄົ້ນຫາ",
+    "resultCount": "{count} ຈາກ {total} ໂຄງການ",
+    "noResults": "ບໍ່ພົບໂຄງການທີ່ກົງກັບ “{query}”.",
+    "filterLabel": "ກັ່ນຕອງໂຄງການຕາມເຕັກໂນໂລຊີ",
+    "filterAll": "ທັງໝົດ"
+  },
+  "pagination": {
+    "label": "ການແບ່ງໜ້າ",
+    "previous": "ໜ້າກ່ອນ",
+    "next": "ໜ້າຕໍ່ໄປ",
+    "page": "ໜ້າ {page}"
   },
   "projectDetail": {
     "allProjects": "ໂຄງການທັງໝົດ",
     "technologyStack": "ເຕັກໂນໂລຊີ",
     "keyFeatures": "ຄຸນສົມບັດຫຼັກ",
-    "githubRepo": "GitHub repository",
+    "githubRepo": "ໂຄ້ດຕົ້ນສະບັບ",
     "liveDemo": "Live demo",
     "liveDemoButton": "Live Demo",
     "viewCodeButton": "ເບິ່ງໂຄ້ດ",
     "nextProject": "ໂຄງການຕໍ່ໄປ",
-    "previewAlt": "ຕົວຢ່າງ {title}"
+    "previewAlt": "ຕົວຢ່າງ {title}",
+    "relatedProjects": "ໂຄງການທີ່ກ່ຽວຂ້ອງ"
   },
   "blogPage": {
     "eyebrow": "ບລັອກ",

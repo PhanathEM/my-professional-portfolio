@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <pattern id="g" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.05"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="675" fill="#0f0f12"/>
+  <rect width="1200" height="675" fill="url(#g)"/>
+  <g stroke="#9276ff" stroke-width="3" fill="none">
+    <rect x="330" y="250" width="240" height="170" rx="14"/>
+    <rect x="620" y="250" width="240" height="170" rx="14"/>
+    <path d="M360 300h180M360 340h120M650 300h180M650 340h140"/>
+  </g>
+  <circle cx="840" cy="400" r="14" fill="#6a3ff5"/>
+  <text x="80" y="110" font-family="ui-monospace, Menlo, Consolas, monospace" font-size="26" fill="#8b8b93">/ ecommerce-storefront</text>
+  <text x="80" y="600" font-family="Inter, system-ui, sans-serif" font-size="52" font-weight="600" fill="#ededef">E-Commerce Storefront</text>
+</svg>

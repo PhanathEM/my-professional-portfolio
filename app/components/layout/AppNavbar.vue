@@ -26,15 +26,13 @@ const mobileOpen = ref(false)
 
 <template>
   <header
-    class="sticky top-0 z-40 transition-[background-color,border-color,backdrop-filter] duration-300"
+    class="sticky top-0 z-40 transition-[background-color,backdrop-filter] duration-300"
     :class="
-      scrolled || mobileOpen
-        ? 'border-b border-border bg-bg/72 backdrop-blur-xl backdrop-saturate-150'
-        : 'border-b border-transparent bg-transparent'
+      scrolled || mobileOpen ? 'bg-bg/72 backdrop-blur-xl backdrop-saturate-150' : 'bg-transparent'
     "
   >
     <nav
-      class="container-page flex h-16 items-center justify-between gap-4"
+      class="container-page flex h-16 items-center justify-between gap-4 border-b border-border dark:border-border-hover"
       :aria-label="$t('a11y.primaryNav')"
     >
       <!-- Brand -->
@@ -50,19 +48,28 @@ const mobileOpen = ref(false)
           height="80"
           class="size-8 shrink-0 rounded-full object-cover object-top ring-1 ring-border-strong transition-colors group-hover:ring-border-hover"
         />
-        <span class="text-[0.95rem] font-semibold tracking-tight">{{ profile.name }}</span>
+        <span class="text-sm font-semibold tracking-tight">{{ profile.name }}</span>
       </NuxtLinkLocale>
 
-      <!-- Desktop links -->
-      <ul class="hidden items-center gap-0.5 lg:flex">
+      <!--
+        Folder tabs. The baseline lives on the <nav> row, so it runs the full
+        container width — from the avatar across to the theme switch. The <ul>
+        stretches to the same height and the active tab is pulled down 1px
+        (`-mb-px`) so its own background covers that line, which is what makes
+        it read as joined to the page rather than sitting on top of it.
+        Inactive tabs keep a transparent border so nothing shifts on hover.
+        Dark mode uses a stronger border: --border is only 9% white there, which
+        all but disappears against #0a0a0b.
+      -->
+      <ul class="hidden items-end gap-1 self-stretch lg:flex">
         <li v-for="item in navItems" :key="item.to">
           <NuxtLinkLocale
             :to="item.to"
-            class="inline-flex h-8 items-center rounded px-3.5 text-sm font-medium transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+            class="-mb-px inline-flex h-9 items-center rounded-t-lg border-x border-t px-4 text-sm font-medium transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-accent focus-visible:outline-none"
             :class="
               isActive(item)
-                ? 'bg-nav-active text-cta-ink'
-                : 'text-muted hover:bg-bg-subtle hover:text-text'
+                ? 'border-border bg-bg text-cta-ink dark:border-border-hover'
+                : 'border-transparent text-muted hover:text-text'
             "
           >
             {{ $t(item.label) }}

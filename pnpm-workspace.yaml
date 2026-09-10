@@ -25,3 +25,13 @@ minimumReleaseAgeExclude:
   - '@vue/server-renderer@3.5.42'
   - '@vue/shared@3.5.42'
   - vue@3.5.42
+
+# pnpm writes this block with placeholder text when it meets an unapproved
+# build script; left unanswered it fails the install with ERR_PNPM_IGNORED_BUILDS.
+# Both are already listed under onlyBuiltDependencies above.
+allowBuilds:
+  esbuild: true
+  unrs-resolver: true
+
+patchedDependencies:
+  '@nuxt/content@3.16.0': patches/@nuxt__content@3.16.0.patch

@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { projects } from '~/data/projects'
+
 const route = useRoute()
 const { t, locales } = useI18n()
 
@@ -24,12 +26,21 @@ if (!doc.value) {
   throw createError({ statusCode: 404, statusMessage: 'Project not found', fatal: true })
 }
 
-const { data: surround } = await useAsyncData(`project-surround-${contentPath.value}`, () =>
-  queryCollectionItemSurroundings('projects', contentPath.value, {
-    fields: ['title', 'description', 'path'],
-  }),
-)
-const nextProject = computed(() => surround.value?.[1] ?? surround.value?.[0] ?? null)
+/**
+ * Related projects: whichever others share the most of this project's stack,
+ * newest first as the tie-break. Read from `~/data/projects` rather than a
+ * second content query — that is the same list the /projects grid renders, so
+ * the cards stay identical and there is no extra database round-trip.
+ */
+const related = computed(() => {
+  const stack = new Set((doc.value?.stack ?? []).map((s: string) => s.toLowerCase()))
+  return projects
+    .filter((p) => `/projects/${p.slug}` !== contentPath.value)
+    .map((p) => ({ p, shared: p.stack.filter((s) => stack.has(s.toLowerCase())).length }))
+    .sort((a, b) => b.shared - a.shared || b.p.year - a.p.year)
+    .slice(0, 3)
+    .map((x) => x.p)
+})
 
 useSeoMeta({
   title: () => doc.value?.title,
@@ -39,7 +50,7 @@ useSeoMeta({
   ogType: 'article',
 })
 
-defineOgImageComponent('OgCard', {
+defineOgImage('OgCard', {
   label: t('projectsSection.caseStudy'),
   title: doc.value.title,
   description: doc.value.description,
@@ -53,8 +64,6 @@ useSchemaOrg([
     author: { name: 'Phanath' },
   }),
 ])
-
-const localePath = useLocalePath()
 </script>
 
 <template>
@@ -69,51 +78,29 @@ const localePath = useLocalePath()
       </NuxtLinkLocale>
 
       <header class="mt-6 max-w-3xl">
-        <div class="flex flex-wrap items-center gap-x-3 gap-y-1 font-mono text-xs text-subtle">
-          <span>{{ doc.year }}</span>
-          <span aria-hidden="true">·</span>
-          <span>{{ doc.role }}</span>
-          <span aria-hidden="true">·</span>
-          <span>{{ doc.timeline }}</span>
-        </div>
-        <h1 class="mt-3 text-4xl font-semibold tracking-tight text-text sm:text-5xl">
+        <h1 class="text-balance text-sm font-semibold tracking-tight text-text sm:text-base">
           {{ doc.title }}
         </h1>
-        <p class="mt-4 text-pretty text-lg/relaxed text-muted">{{ doc.summary }}</p>
-
-        <div class="mt-6 flex flex-wrap gap-3">
-          <AppButton v-if="doc.demo" :href="doc.demo" size="sm" icon="lucide:external-link">
-            {{ t('projectDetail.liveDemoButton') }}
-          </AppButton>
-          <AppButton
-            v-if="doc.repo"
-            :href="doc.repo"
-            size="sm"
-            :variant="doc.demo ? 'secondary' : 'primary'"
-            icon="lucide:github"
-          >
-            {{ t('projectDetail.viewCodeButton') }}
-          </AppButton>
-        </div>
+        <p class="mt-4 text-pretty text-sm/relaxed text-muted">{{ doc.summary }}</p>
       </header>
     </div>
 
-    <div class="container-page mt-10">
-      <NuxtImg
-        v-if="doc.cover"
-        :src="doc.cover"
-        :alt="t('projectDetail.previewAlt', { title: doc.title })"
-        width="1200"
-        height="675"
-        sizes="(max-width: 1024px) 100vw, 1024px"
-        class="aspect-video w-full rounded-xl border border-border object-cover"
-      />
-    </div>
+    <div class="container-page mt-10 grid gap-12 lg:grid-cols-[1fr_21rem] lg:gap-16">
+      <!-- cover + body -->
+      <div class="min-w-0">
+        <NuxtImg
+          v-if="doc.cover"
+          :src="doc.cover"
+          :alt="t('projectDetail.previewAlt', { title: doc.title })"
+          width="1200"
+          height="675"
+          sizes="(max-width: 1024px) 100vw, 60vw"
+          class="aspect-video w-full rounded-xl border border-border object-cover"
+        />
 
-    <div class="container-page mt-14 grid gap-12 lg:grid-cols-[1fr_18rem] lg:gap-16">
-      <!-- body -->
-      <div class="prose-content min-w-0 max-w-2xl">
-        <ContentRenderer :value="doc" />
+        <div class="prose-content mt-10 min-w-0 max-w-2xl">
+          <ContentRenderer :value="doc" />
+        </div>
       </div>
 
       <!-- aside -->
@@ -130,72 +117,39 @@ const localePath = useLocalePath()
             </ul>
           </div>
 
-          <div v-if="doc.features?.length">
-            <h2 class="font-mono text-xs font-medium tracking-[0.14em] text-subtle uppercase">
-              {{ t('projectDetail.keyFeatures') }}
-            </h2>
-            <ul class="mt-3 space-y-2">
-              <li
-                v-for="feature in doc.features"
-                :key="feature"
-                class="flex items-start gap-2 text-sm text-muted"
-              >
-                <Icon
-                  name="lucide:check"
-                  :size="14"
-                  class="mt-0.5 shrink-0 text-accent"
-                  aria-hidden="true"
-                />
-                {{ feature }}
-              </li>
-            </ul>
-          </div>
-
-          <div class="flex flex-col gap-2">
-            <a
+          <div class="flex flex-wrap items-center gap-2">
+            <AppButton
               v-if="doc.repo"
               :href="doc.repo"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="inline-flex items-center gap-2 text-sm text-muted transition-colors hover:text-text"
+              size="sm"
+              variant="secondary"
+              icon="lucide:github"
             >
-              <Icon name="lucide:github" :size="15" aria-hidden="true" />
               {{ t('projectDetail.githubRepo') }}
-            </a>
-            <a
+            </AppButton>
+            <AppButton
               v-if="doc.demo"
               :href="doc.demo"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="inline-flex items-center gap-2 text-sm text-muted transition-colors hover:text-text"
+              size="sm"
+              icon="lucide:external-link"
+              class="ml-auto"
             >
-              <Icon name="lucide:external-link" :size="15" aria-hidden="true" />
               {{ t('projectDetail.liveDemo') }}
-            </a>
+            </AppButton>
           </div>
         </div>
       </aside>
     </div>
 
-    <!-- next project -->
-    <div v-if="nextProject" class="container-page mt-16">
-      <NuxtLink
-        :to="localePath(nextProject.path)"
-        class="group flex items-center justify-between gap-4 rounded-xl border border-border bg-surface p-6 transition-colors hover:border-accent/40"
-      >
-        <span>
-          <span class="font-mono text-xs text-subtle">{{ t('projectDetail.nextProject') }}</span>
-          <span class="mt-1 block text-lg font-semibold tracking-tight text-text">
-            {{ nextProject.title }}
-          </span>
-        </span>
-        <Icon
-          name="lucide:arrow-right"
-          :size="20"
-          class="shrink-0 text-muted transition-transform group-hover:translate-x-1"
-          aria-hidden="true"
-        />
-      </NuxtLink>
-    </div>
+    <!-- related -->
+    <section v-if="related.length" class="container-page mt-20">
+      <RevealOnScroll>
+        <h2 class="text-balance text-sm font-semibold tracking-tight text-text sm:text-base">
+          {{ t('projectDetail.relatedProjects') }}
+        </h2>
+      </RevealOnScroll>
+
+      <ProjectGrid class="mt-8" :projects="related" :columns="3" />
+    </section>
   </article>
 </template>
