@@ -76,16 +76,9 @@ useSchemaOrg([
         <Icon name="lucide:arrow-left" :size="15" aria-hidden="true" />
         {{ t('projectDetail.allProjects') }}
       </NuxtLinkLocale>
-
-      <header class="mt-6 max-w-3xl">
-        <h1 class="text-balance text-sm font-semibold tracking-tight text-text sm:text-base">
-          {{ doc.title }}
-        </h1>
-        <p class="mt-4 text-pretty text-sm/relaxed text-muted">{{ doc.summary }}</p>
-      </header>
     </div>
 
-    <div class="container-page mt-10 grid gap-12 lg:grid-cols-[1fr_21rem] lg:gap-16">
+    <div class="container-page mt-10 grid gap-10 lg:grid-cols-[1fr_21rem] lg:gap-8">
       <!-- cover + body -->
       <div class="min-w-0">
         <NuxtImg
@@ -95,24 +88,28 @@ useSchemaOrg([
           width="1200"
           height="675"
           sizes="(max-width: 1024px) 100vw, 60vw"
-          class="aspect-video w-full rounded-xl border border-border object-cover"
+          class="aspect-video w-full border border-border object-cover"
         />
 
-        <div class="prose-content mt-10 min-w-0 max-w-2xl">
-          <ContentRenderer :value="doc" />
-        </div>
+        <!-- Title and summary sit under the cover, in place of the Markdown body. -->
+        <header class="mt-8 max-w-2xl">
+          <h1 class="font-heading text-base/snug tracking-tight text-text">
+            {{ doc.title }}
+          </h1>
+          <p class="mt-4 text-pretty text-sm/relaxed text-muted">{{ doc.summary }}</p>
+        </header>
       </div>
 
       <!-- aside -->
       <aside class="lg:sticky lg:top-24 lg:h-fit">
-        <div class="space-y-8 rounded-xl border border-border bg-surface p-6">
+        <div class="space-y-8 rounded-xs bg-bg-subtle p-6 border border-border">
           <div>
             <h2 class="font-mono text-xs font-medium tracking-[0.14em] text-subtle uppercase">
               {{ t('projectDetail.technologyStack') }}
             </h2>
             <ul class="mt-3 flex flex-wrap gap-1.5">
               <li v-for="tech in doc.stack" :key="tech">
-                <TechnologyBadge :name="tech" />
+                <TechnologyBadge :name="tech" variant="surface" />
               </li>
             </ul>
           </div>

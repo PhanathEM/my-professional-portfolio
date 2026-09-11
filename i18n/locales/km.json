@@ -175,7 +175,8 @@
     "resultCount": "គម្រោង {count} ក្នុងចំណោម {total}",
     "noResults": "រកមិនឃើញគម្រោងដែលត្រូវនឹង «{query}» ទេ។",
     "filterLabel": "ត្រងគម្រោងតាមបច្ចេកវិទ្យា",
-    "filterAll": "ទាំងអស់"
+    "filterAll": "ទាំងអស់",
+    "stackLabel": "បច្ចេកវិទ្យាដែលប្រើ"
   },
   "pagination": {
     "label": "ការបែងចែកទំព័រ",

@@ -167,14 +167,15 @@
   "projectsPage": {
     "eyebrow": "Projects",
     "title": "ALL PROJECTS I'VE DESIGNED AND BUILT",
-    "description": "A mix of study projects, open-source experiments and client work. Every card links to a written case study covering the problem, the architecture and what I learned.",
+    "description": "A mix of study projects, open-source experiments.",
     "searchLabel": "Search projects",
     "searchPlaceholder": "Search by name, tech or role…",
     "clearSearch": "Clear search",
     "resultCount": "{count} of {total} projects",
     "noResults": "No projects match “{query}”.",
     "filterLabel": "Filter projects by technology",
-    "filterAll": "All"
+    "filterAll": "All",
+    "stackLabel": "Technology stack"
   },
   "pagination": {
     "label": "Pagination",

@@ -15,8 +15,8 @@ export const navItems: NavItem[] = [
 
 /** Condensed footer navigation. */
 export const footerNav: NavItem[] = [
-  { label: 'nav.about', to: '/about' },
   { label: 'nav.projects', to: '/projects' },
   { label: 'nav.blog', to: '/blog' },
+  { label: 'nav.about', to: '/about' },
   { label: 'nav.contact', to: '/contact' },
 ]

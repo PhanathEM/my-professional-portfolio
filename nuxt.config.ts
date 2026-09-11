@@ -80,7 +80,7 @@ export default defineNuxtConfig({
     class: 'inline-block shrink-0',
     size: '20px',
     serverBundle: {
-      collections: ['lucide'],
+      collections: ['lucide', 'logos'],
     },
   },
 

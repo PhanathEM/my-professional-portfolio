@@ -1,6 +1,13 @@
 <script setup lang="ts">
 /** Small, calm technology chip used across project cards and case studies. */
-defineProps<{ name: string }>()
+withDefaults(
+  defineProps<{
+    name: string
+    /** `surface` = white chip, for sitting on a tinted panel; default blends on the page. */
+    variant?: 'subtle' | 'surface'
+  }>(),
+  { variant: 'subtle' },
+)
 
 // Map a handful of stack names to a representative Lucide glyph.
 const iconMap: Record<string, string> = {
@@ -26,7 +33,8 @@ const iconMap: Record<string, string> = {
 
 <template>
   <span
-    class="inline-flex items-center gap-1.5 rounded-md border border-border bg-bg-subtle px-2.5 py-1 font-mono text-[0.72rem] text-muted"
+    class="inline-flex items-center gap-1.5 rounded-md border border-border px-2.5 py-1 font-mono text-[0.72rem] text-muted"
+    :class="variant === 'surface' ? 'bg-surface' : 'bg-bg-subtle'"
   >
     <Icon :name="iconMap[name] ?? 'lucide:box'" :size="12" aria-hidden="true" />
     {{ name }}

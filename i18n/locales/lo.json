@@ -175,7 +175,8 @@
     "resultCount": "{count} ຈາກ {total} ໂຄງການ",
     "noResults": "ບໍ່ພົບໂຄງການທີ່ກົງກັບ “{query}”.",
     "filterLabel": "ກັ່ນຕອງໂຄງການຕາມເຕັກໂນໂລຊີ",
-    "filterAll": "ທັງໝົດ"
+    "filterAll": "ທັງໝົດ",
+    "stackLabel": "ເຕັກໂນໂລຊີທີ່ໃຊ້"
   },
   "pagination": {
     "label": "ການແບ່ງໜ້າ",

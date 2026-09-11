@@ -31,38 +31,18 @@ const haystacks = new Map(
   ]),
 )
 
-/**
- * Every technology in the data, most-used first. The counts are not rendered
- * any more but still decide the order, so the stack you use most leads.
- */
-const technologies = computed(() => {
-  const counts = new Map<string, number>()
-  for (const p of ordered) for (const tech of p.stack) counts.set(tech, (counts.get(tech) ?? 0) + 1)
-  return [...counts.entries()]
-    .map(([name, count]) => ({ name, count }))
-    .sort((a, b) => b.count - a.count || a.name.localeCompare(b.name))
-})
-
 const query = ref('')
-const activeTech = ref<string | null>(null)
 const normalised = computed(() => query.value.trim().toLowerCase())
-const isFiltering = computed(() => Boolean(normalised.value) || activeTech.value !== null)
 
 const filtered = computed(() => {
-  const terms = normalised.value ? normalised.value.split(/\s+/) : []
+  if (!normalised.value) return ordered
+  // Every term must appear, so "nuxt api" narrows rather than widens.
+  const terms = normalised.value.split(/\s+/)
   return ordered.filter((p) => {
-    if (activeTech.value && !p.stack.includes(activeTech.value)) return false
-    if (!terms.length) return true
-    // Every term must appear, so "nuxt api" narrows rather than widens.
     const hay = haystacks.get(p.slug) ?? ''
     return terms.every((term) => hay.includes(term))
   })
 })
-
-function reset() {
-  query.value = ''
-  activeTech.value = null
-}
 
 /** 9 cards fill the 3-column grid to exactly three complete rows. */
 const PER_PAGE = 9
@@ -76,11 +56,6 @@ const paged = computed(() =>
 watch(filtered, () => {
   if (page.value > totalPages.value) page.value = 1
 })
-
-const CHIP_BASE =
-  'inline-flex h-8 items-center rounded-full border px-3.5 text-sm font-medium transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-accent focus-visible:outline-none'
-const CHIP_ON = 'border-transparent bg-nav-active text-cta-ink'
-const CHIP_OFF = 'border-border bg-surface text-muted hover:border-border-hover hover:text-text'
 </script>
 
 <template>
@@ -88,17 +63,16 @@ const CHIP_OFF = 'border-border bg-surface text-muted hover:border-border-hover 
     <header>
       <div class="container-page pt-16 md:pt-20">
         <RevealOnScroll>
-          <!-- Title and search share one row. The search used to sit alone
-               with two thirds of the line empty beside it. -->
           <div class="flex flex-wrap items-end justify-between gap-x-8 gap-y-6">
             <SectionHeading
               as="h1"
-              :eyebrow="t('projectsPage.eyebrow')"
               :title="t('projectsPage.title')"
               :description="t('projectsPage.description')"
+              description-size="sm"
+              title-size="sm"
             />
 
-            <div class="relative w-full sm:w-64">
+            <div class="relative w-full sm:w-96">
               <Icon
                 name="lucide:search"
                 :size="15"
@@ -124,39 +98,6 @@ const CHIP_OFF = 'border-border bg-surface text-muted hover:border-border-hover 
             </div>
           </div>
         </RevealOnScroll>
-
-        <!-- Technology filters, derived from the project data itself. -->
-        <RevealOnScroll :y="12" :delay="0.06">
-          <div
-            class="mt-8 flex flex-wrap items-center gap-2 border-t border-border pt-6"
-            role="group"
-            :aria-label="t('projectsPage.filterLabel')"
-          >
-            <button
-              type="button"
-              :class="[CHIP_BASE, activeTech === null ? CHIP_ON : CHIP_OFF]"
-              :aria-pressed="activeTech === null"
-              @click="activeTech = null"
-            >
-              {{ t('projectsPage.filterAll') }}
-            </button>
-
-            <button
-              v-for="tech in technologies"
-              :key="tech.name"
-              type="button"
-              :class="[CHIP_BASE, activeTech === tech.name ? CHIP_ON : CHIP_OFF]"
-              :aria-pressed="activeTech === tech.name"
-              @click="activeTech = activeTech === tech.name ? null : tech.name"
-            >
-              {{ tech.name }}
-            </button>
-
-            <p v-if="isFiltering" class="ml-auto font-mono text-xs text-subtle" aria-live="polite">
-              {{ t('projectsPage.resultCount', { count: filtered.length, total: ordered.length }) }}
-            </p>
-          </div>
-        </RevealOnScroll>
       </div>
     </header>
 
@@ -175,15 +116,15 @@ const CHIP_OFF = 'border-border bg-surface text-muted hover:border-border-hover 
 
         <div v-else class="py-10">
           <p class="text-sm text-muted">
-            {{ t('projectsPage.noResults', { query: query.trim() || activeTech }) }}
+            {{ t('projectsPage.noResults', { query: query.trim() }) }}
           </p>
           <button
             type="button"
             class="mt-3 inline-flex items-center gap-1.5 text-sm text-cta-ink transition-colors hover:text-text focus-visible:ring-2 focus-visible:ring-accent focus-visible:outline-none"
-            @click="reset"
+            @click="query = ''"
           >
             <Icon name="lucide:rotate-ccw" :size="14" aria-hidden="true" />
-            {{ t('projectsPage.filterAll') }}
+            {{ t('projectsPage.clearSearch') }}
           </button>
         </div>
       </div>

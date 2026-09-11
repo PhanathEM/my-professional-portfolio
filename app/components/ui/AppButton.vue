@@ -22,7 +22,7 @@ const props = withDefaults(
 )
 
 const base =
-  'group relative inline-flex items-center justify-center gap-2 rounded-md font-medium tracking-tight transition-[background-color,color,border-color,transform,box-shadow] duration-200 ease-[cubic-bezier(0.16,1,0.3,1)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg disabled:pointer-events-none disabled:opacity-55 active:translate-y-px'
+  'group relative inline-flex items-center justify-center gap-2 rounded-xs font-medium tracking-tight transition-[background-color,color,border-color,transform,box-shadow] duration-200 ease-[cubic-bezier(0.16,1,0.3,1)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg disabled:pointer-events-none disabled:opacity-55 active:translate-y-px'
 
 const variants: Record<Variant, string> = {
   primary: 'btn-cta text-cta-contrast',

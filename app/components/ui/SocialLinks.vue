@@ -18,7 +18,7 @@ withDefaults(
         :target="link.href.startsWith('http') ? '_blank' : undefined"
         :rel="link.href.startsWith('http') ? 'noopener noreferrer' : undefined"
         :aria-label="`${link.label}${link.handle ? ` — ${link.handle}` : ''}`"
-        class="inline-flex items-center justify-center rounded-md text-muted transition-colors duration-200 hover:text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+        class="inline-flex items-center justify-center rounded-full text-muted transition-colors duration-200 hover:text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
         :class="[
           size === 'sm' ? 'size-9' : 'size-10',
           variant === 'bordered' &&

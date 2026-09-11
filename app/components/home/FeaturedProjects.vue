@@ -12,7 +12,7 @@ const columns = computed<3 | 4>(() => (featuredProjects.length >= 4 ? 4 : 3))
 </script>
 
 <template>
-  <section id="projects" class="section-pad scroll-mt-20">
+  <section id="projects" class="section-pad scroll-mt-20 pt-8 md:pt-10">
     <div class="container-page">
       <RevealOnScroll>
         <div class="flex flex-wrap items-end justify-between gap-6">

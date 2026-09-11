@@ -14,13 +14,13 @@ const columnClass = computed(() => COLUMNS[props.columns])
 </script>
 
 <template>
-  <div class="grid gap-x-8 gap-y-12" :class="columnClass">
+  <div class="grid gap-6" :class="columnClass">
     <RevealOnScroll
       v-for="(project, i) in projects"
       :key="project.slug"
       :y="18"
       :delay="(i % columns) * 0.06"
-      class="min-w-0"
+      class="h-full min-w-0"
     >
       <ProjectEditorialCard :project="project" />
     </RevealOnScroll>

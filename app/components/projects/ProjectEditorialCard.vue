@@ -2,8 +2,8 @@
 import type { Project } from '~/types'
 
 /**
- * Editorial project card: cover, headline, standfirst. No border, fill, badges
- * or action row — the image and the type carry it. Used by `ProjectGrid`, so
+ * Project card: cover, headline, standfirst on a soft tinted panel. No border,
+ * badges or action row — the image and the type carry it. Used by `ProjectGrid`, so
  * the home page teaser and the full `/projects` listing stay identical.
  */
 const props = defineProps<{ project: Project }>()
@@ -20,7 +20,9 @@ const isExternal = computed(() => href.value.startsWith('http'))
 </script>
 
 <template>
-  <article class="group relative flex flex-col">
+  <!-- Same treatment as the case-study sidebar: soft tint, no border, 12px
+       corners. `overflow-hidden` lets the cover take the card's corners. -->
+  <article class="group relative flex h-full flex-col overflow-hidden rounded-xs bg-bg-subtle">
     <!-- The cover repeats the headline's link, so it is hidden from assistive
          tech and skipped by the keyboard rather than announced twice. -->
     <NuxtLinkLocale
@@ -28,7 +30,7 @@ const isExternal = computed(() => href.value.startsWith('http'))
       :external="isExternal"
       :target="isExternal ? '_blank' : undefined"
       :rel="isExternal ? 'noopener noreferrer' : undefined"
-      class="block overflow-hidden bg-bg-subtle focus-visible:outline-none"
+      class="block overflow-hidden focus-visible:outline-none"
       tabindex="-1"
       aria-hidden="true"
     >
@@ -43,18 +45,20 @@ const isExternal = computed(() => href.value.startsWith('http'))
       />
     </NuxtLinkLocale>
 
-    <h3 class="mt-4 font-heading text-xl/snug font-bold tracking-tight text-text">
-      <NuxtLinkLocale
-        :to="href"
-        :external="isExternal"
-        :target="isExternal ? '_blank' : undefined"
-        :rel="isExternal ? 'noopener noreferrer' : undefined"
-        class="decoration-2 underline-offset-4 after:absolute after:inset-0 after:content-[''] focus-visible:outline-none group-hover:underline"
-      >
-        {{ project.title }}
-      </NuxtLinkLocale>
-    </h3>
+    <div class="flex flex-1 flex-col p-5">
+      <h4 class="font-heading text-base/snug tracking-tight text-text">
+        <NuxtLinkLocale
+          :to="href"
+          :external="isExternal"
+          :target="isExternal ? '_blank' : undefined"
+          :rel="isExternal ? 'noopener noreferrer' : undefined"
+          class="after:absolute after:inset-0 after:content-[''] focus-visible:outline-none"
+        >
+          {{ project.title }}
+        </NuxtLinkLocale>
+      </h4>
 
-    <p class="mt-3 text-pretty text-sm/relaxed text-muted">{{ project.description }}</p>
+      <p class="mt-3 text-pretty text-sm/relaxed text-muted">{{ project.description }}</p>
+    </div>
   </article>
 </template>
