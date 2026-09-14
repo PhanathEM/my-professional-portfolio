@@ -26,6 +26,8 @@ const contacts = computed(() => [
           <span class="about-tick bottom-2 left-2 border-b border-l" aria-hidden="true" />
           <span class="about-tick right-2 bottom-2 border-r border-b" aria-hidden="true" />
 
+          <AboutCollage />
+
           <!-- The cutout stands on the plate's bottom edge: its negative
                margin cancels the plate's bottom padding. -->
           <div class="flex flex-col gap-6 sm:flex-row sm:items-end sm:gap-10">

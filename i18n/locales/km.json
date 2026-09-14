@@ -77,7 +77,11 @@
     "learningJourney": "ដំណើរនៃការរៀន",
     "portraitAlt": "រូបភាពរបស់ {name}",
     "education": "ការសិក្សា",
-    "contact": "ទំនាក់ទំនង"
+    "contact": "ទំនាក់ទំនង",
+    "collage": {
+      "ceremony": "ថ្ងៃបញ្ចប់ការសិក្សា",
+      "award": "ពានរង្វាន់"
+    }
   },
   "skills": {
     "eyebrow": "ជំនាញ",

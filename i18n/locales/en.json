@@ -76,7 +76,11 @@
     "learningJourney": "Learning journey",
     "portraitAlt": "Portrait of {name}",
     "education": "EDUCATION",
-    "contact": "Contact"
+    "contact": "Contact",
+    "collage": {
+      "ceremony": "Graduation day",
+      "award": "Award"
+    }
   },
   "skills": {
     "eyebrow": "Skills",

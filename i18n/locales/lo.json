@@ -77,7 +77,11 @@
     "learningJourney": "ເສັ້ນທາງການຮຽນ",
     "portraitAlt": "ຮູບຂອງ {name}",
     "education": "ການສຶກສາ",
-    "contact": "ຕິດຕໍ່"
+    "contact": "ຕິດຕໍ່",
+    "collage": {
+      "ceremony": "ວັນຮັບປະລິນຍາ",
+      "award": "ລາງວັນ"
+    }
   },
   "skills": {
     "eyebrow": "ທັກສະ",
