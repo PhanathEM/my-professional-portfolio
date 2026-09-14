@@ -28,7 +28,7 @@ withDefaults(
     <component
       :is="as"
       class="text-balance font-semibold tracking-tight text-text"
-      :class="titleSize === 'sm' ? 'text-sm sm:text-base' : 'text-3xl sm:text-4xl'"
+      :class="titleSize === 'sm' ? 'text-sm' : 'text-3xl sm:text-4xl'"
     >
       {{ title }}
     </component>

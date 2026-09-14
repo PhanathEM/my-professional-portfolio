@@ -42,6 +42,23 @@ const related = computed(() => {
     .map((x) => x.p)
 })
 
+/**
+ * "Nuxt, TypeScript, Nitro, PostgreSQL and Tailwind CSS" — the stack as a
+ * sentence, with the conjunction in the visitor's language where the runtime
+ * knows it. The plain join is only for engines without `Intl.ListFormat`.
+ */
+const { locale } = useI18n()
+const stackSentence = computed(() => {
+  const items: string[] = doc.value?.stack ?? []
+  try {
+    // en-GB: "A, B and C" — no Oxford comma.
+    const tag = locale.value === 'en' ? 'en-GB' : locale.value
+    return new Intl.ListFormat(tag, { style: 'long', type: 'conjunction' }).format(items)
+  } catch {
+    return items.join(', ')
+  }
+})
+
 useSeoMeta({
   title: () => doc.value?.title,
   description: () => doc.value?.description,
@@ -78,9 +95,9 @@ useSchemaOrg([
       </NuxtLinkLocale>
     </div>
 
-    <div class="container-page mt-10 grid gap-10 lg:grid-cols-[1fr_21rem] lg:gap-8">
+    <div class="container-page mt-10 grid gap-6 lg:grid-cols-3">
       <!-- cover + body -->
-      <div class="min-w-0">
+      <div class="min-w-0 lg:col-span-2">
         <NuxtImg
           v-if="doc.cover"
           :src="doc.cover"
@@ -88,33 +105,28 @@ useSchemaOrg([
           width="1200"
           height="675"
           sizes="(max-width: 1024px) 100vw, 60vw"
-          class="aspect-video w-full border border-border object-cover"
+          class="aspect-video w-full rounded-xs border border-border object-cover"
         />
-
-        <!-- Title and summary sit under the cover, in place of the Markdown body. -->
-        <header class="mt-8 max-w-2xl">
-          <h1 class="font-heading text-base/snug tracking-tight text-text">
-            {{ doc.title }}
-          </h1>
-          <p class="mt-4 text-pretty text-sm/relaxed text-muted">{{ doc.summary }}</p>
-        </header>
       </div>
 
       <!-- aside -->
-      <aside class="lg:sticky lg:top-24 lg:h-fit">
-        <div class="space-y-8 rounded-xs bg-bg-subtle p-6 border border-border">
-          <div>
-            <h2 class="font-mono text-xs font-medium tracking-[0.14em] text-subtle uppercase">
-              {{ t('projectDetail.technologyStack') }}
-            </h2>
-            <ul class="mt-3 flex flex-wrap gap-1.5">
-              <li v-for="tech in doc.stack" :key="tech">
-                <TechnologyBadge :name="tech" variant="surface" />
-              </li>
-            </ul>
-          </div>
+      <!-- Stretches to the cover's height; the action row is pinned to the bottom. -->
+      <aside class="flex">
+        <div class="flex flex-1 flex-col gap-8 rounded-xs border border-border bg-bg-subtle p-6">
+          <!-- Title and summary open the panel, in place of the Markdown body. -->
+          <header>
+            <h1 class="font-heading text-base/snug tracking-tight text-text">
+              {{ doc.title }}
+            </h1>
+            <p class="mt-3 text-pretty text-sm/relaxed text-muted">{{ doc.summary }}</p>
+          </header>
 
-          <div class="flex flex-wrap items-center gap-2">
+          <p class="text-pretty text-sm/relaxed text-muted">
+            <span class="font-medium text-text">{{ t('projectDetail.technologyStack') }}:</span>
+            {{ stackSentence }}.
+          </p>
+
+          <div class="mt-auto flex flex-wrap items-center gap-2">
             <AppButton
               v-if="doc.repo"
               :href="doc.repo"

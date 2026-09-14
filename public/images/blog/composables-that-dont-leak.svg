@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-label="Vue">
+  <rect width="1200" height="675" fill="#0e0e10"/>
+  <text x="120" y="120" font-family="JetBrains Mono, ui-monospace, monospace" font-size="22" letter-spacing="4" fill="#ff631c">VUE</text>
+  <g font-family="JetBrains Mono, ui-monospace, monospace" font-size="26" fill="#c9c9d1" xml:space="preserve">
+    <text x="120" y="200">export function useSearch(items) {</text>
+<text x="120" y="246">  const query = ref(&#x27;&#x27;)</text>
+<text x="120" y="292">  const results = computed(() =&gt;</text>
+<text x="120" y="338">    filter(items, query.value))</text>
+<text x="120" y="384">  return { query, results }</text>
+<text x="120" y="430">}</text>
+  </g>
+</svg>

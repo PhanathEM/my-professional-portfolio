@@ -18,22 +18,8 @@ defineOgImage('OgCard', {
 
 <template>
   <div>
-    <header class="border-b border-border">
-      <div class="container-page pb-10 pt-16 md:pt-20">
-        <RevealOnScroll>
-          <SectionHeading
-            as="h1"
-            :eyebrow="t('about.eyebrow')"
-            :title="t('about.title')"
-            :description="t('profile.tagline')"
-          />
-        </RevealOnScroll>
-      </div>
-    </header>
-
-    <AboutSection />
-    <SkillsSection />
-    <ExperienceSection />
-    <ServicesSection />
+    <AboutIntro />
+    <AboutSkills />
+    <AboutExperience />
   </div>
 </template>

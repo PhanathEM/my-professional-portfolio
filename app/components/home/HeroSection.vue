@@ -40,7 +40,7 @@ const features = [
     <div class="hero-veil pointer-events-none absolute inset-0 z-[2]" aria-hidden="true" />
 
     <div
-      class="container-page relative z-10 flex min-h-[calc(100svh-4rem)] flex-col items-center justify-center pb-20 pt-24 text-center"
+      class="container-page relative z-10 flex min-h-[calc(92svh-4rem)] flex-col items-center justify-center pb-20 pt-24 text-center"
     >
       <RevealOnScroll :y="14" :delay="step">
         <h1

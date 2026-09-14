@@ -4,6 +4,7 @@ description: Strict mode is the baseline. These are the extra compiler options t
 date: 2026-07-09
 author: Phanath
 category: TypeScript
+cover: /images/blog/typescript-strict-mode-in-practice.svg
 tags:
   - typescript
   - tooling

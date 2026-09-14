@@ -4,6 +4,7 @@ description: Naming, keys, timestamps, soft deletes and the small decisions that
 date: 2026-08-02
 author: Phanath
 category: PostgreSQL
+cover: /images/blog/designing-postgres-schemas.svg
 tags:
   - postgresql
   - databases

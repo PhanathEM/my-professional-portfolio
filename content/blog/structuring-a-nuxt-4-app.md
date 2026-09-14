@@ -4,6 +4,7 @@ description: A practical folder structure for Nuxt 4 projects that scales past t
 date: 2026-06-18
 author: Phanath
 category: Nuxt
+cover: /images/blog/nuxt-4-structure.svg
 tags:
   - nuxt
   - architecture

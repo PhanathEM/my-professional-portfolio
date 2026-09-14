@@ -18,7 +18,7 @@ export const profile: Profile = {
   email: 'hello@phanath.dev', // [PLACEHOLDER] public contact email
   resumeUrl: '/resume.pdf', // [PLACEHOLDER] drop a PDF into /public to enable
   logo: '/images/profile/profile.jpg', // brand mark in the navbar + footer
-  avatar: '/images/profile/profile.jpg', // portrait in the About section
+  avatar: '/images/profile/profile-cutout.png', // portrait in the About section (background removed)
 
   bioCount: 3, // paragraphs authored as profile.bio.1..3
   focusCount: 4, // bullets authored as profile.focus.1..4

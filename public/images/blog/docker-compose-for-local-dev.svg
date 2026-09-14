@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-label="Docker">
+  <rect width="1200" height="675" fill="#0e0e10"/>
+  <text x="120" y="120" font-family="JetBrains Mono, ui-monospace, monospace" font-size="22" letter-spacing="4" fill="#ff631c">DOCKER</text>
+  <g font-family="JetBrains Mono, ui-monospace, monospace" font-size="26" fill="#c9c9d1" xml:space="preserve">
+    <text x="120" y="200">services:</text>
+<text x="120" y="246">  db:</text>
+<text x="120" y="292">    image: postgres:17</text>
+<text x="120" y="338">    volumes: [pg:/var/lib/postgresql/data]</text>
+<text x="120" y="384">  redis:</text>
+<text x="120" y="430">    image: redis:7-alpine</text>
+<text x="120" y="476">  mail:</text>
+<text x="120" y="522">    image: axllent/mailpit</text>
+  </g>
+</svg>

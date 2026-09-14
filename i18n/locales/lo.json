@@ -75,7 +75,9 @@
     "philosophyLabel": "ຫຼັກການພັດທະນາ",
     "currentFocus": "ຈຸດເນັ້ນປັດຈຸບັນ",
     "learningJourney": "ເສັ້ນທາງການຮຽນ",
-    "portraitAlt": "ຮູບຂອງ {name}"
+    "portraitAlt": "ຮູບຂອງ {name}",
+    "education": "ການສຶກສາ",
+    "contact": "ຕິດຕໍ່"
   },
   "skills": {
     "eyebrow": "ທັກສະ",
@@ -205,7 +207,12 @@
     "empty": "ຍັງບໍ່ມີບົດຄວາມ — ກະລຸນາກັບມາເບິ່ງໃໝ່ໃນໄວໆນີ້.",
     "minRead": "ອ່ານ {count} ນາທີ",
     "readArticle": "ອ່ານບົດຄວາມ",
-    "readArticleAria": "{title} — ອ່ານບົດຄວາມ"
+    "readArticleAria": "{title} — ອ່ານບົດຄວາມ",
+    "searchLabel": "ຄົ້ນຫາບົດຄວາມ",
+    "searchPlaceholder": "ຄົ້ນຫາ",
+    "clearSearch": "ລ້າງການຄົ້ນຫາ",
+    "noResults": "ບໍ່ພົບບົດຄວາມທີ່ກົງກັບ “{query}”.",
+    "seeMore": "ເບິ່ງເພີ່ມເຕີມ"
   },
   "blogDetail": {
     "breadcrumb": "ບລັອກ",
@@ -213,7 +220,22 @@
     "previous": "ກ່ອນໜ້າ",
     "next": "ຕໍ່ໄປ",
     "moreArticles": "ບົດຄວາມເພີ່ມເຕີມ",
-    "coverAlt": "ໜ້າປົກຂອງ {title}"
+    "coverAlt": "ໜ້າປົກຂອງ {title}",
+    "allArticles": "ບົດຄວາມທັງໝົດ",
+    "onThisPage": "ໃນໜ້ານີ້",
+    "published": "ເຜີຍແຜ່",
+    "readingTime": "ເວລາອ່ານ",
+    "category": "ໝວດໝູ່",
+    "tags": "ແທັກ",
+    "copyLink": "ສຳເນົາລິ້ງ",
+    "linkCopied": "ສຳເນົາລິ້ງແລ້ວ",
+    "by": "ໂດຍ {author}",
+    "share": "ແບ່ງປັນ",
+    "textSize": "ຂະໜາດຕົວອັກສອນ",
+    "expandImage": "ເບິ່ງຂະໜາດເຕັມ",
+    "closeImage": "ປິດ",
+    "backToTop": "ກັບໄປດ້ານເທິງ",
+    "related": "ທີ່ກ່ຽວຂ້ອງ"
   },
   "contact": {
     "eyebrow": "ຕິດຕໍ່",

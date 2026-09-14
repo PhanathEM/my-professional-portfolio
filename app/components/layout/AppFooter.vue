@@ -64,12 +64,16 @@ const rule = (startAt: number) => ({ transform: `scaleX(${layer(startAt).toFixed
 
 <template>
   <footer ref="footerEl" class="sticky bottom-0 z-0 bg-bg">
-    <!-- Hairline drawn from the centre outwards as the footer is uncovered. -->
-    <span
-      class="absolute inset-x-0 top-0 h-px origin-center bg-border will-change-transform"
-      :style="rule(0)"
-      aria-hidden="true"
-    />
+    <!-- Hairline drawn from the centre outwards as the footer is uncovered.
+         Wrapped in the page container so it stops at the content edge, in
+         line with the navbar baseline, instead of running edge to edge. -->
+    <div class="container-page relative">
+      <span
+        class="absolute inset-x-5 top-0 h-px origin-center bg-border will-change-transform sm:inset-x-8"
+        :style="rule(0)"
+        aria-hidden="true"
+      />
+    </div>
 
     <div
       class="container-page grid gap-10 py-14 footer-reveal-layer sm:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr]"
@@ -130,15 +134,15 @@ const rule = (startAt: number) => ({ transform: `scaleX(${layer(startAt).toFixed
       </div>
     </div>
 
-    <div class="relative">
+    <div class="container-page relative">
       <!-- Drawn from the centre outwards, a beat before the row below it. -->
       <span
-        class="absolute inset-x-0 top-0 h-px origin-center bg-border will-change-transform"
+        class="absolute inset-x-5 top-0 h-px origin-center bg-border will-change-transform sm:inset-x-8"
         :style="rule(0.25)"
         aria-hidden="true"
       />
       <div
-        class="footer-reveal-layer container-page py-6 text-center text-xs text-subtle"
+        class="footer-reveal-layer py-6 text-center text-xs text-subtle"
         :style="style(0.35, 18, 9)"
       >
         <p>{{ t('footer.rights', { year, name: profile.name }) }}</p>

@@ -20,9 +20,12 @@ const isExternal = computed(() => href.value.startsWith('http'))
 </script>
 
 <template>
-  <!-- Same treatment as the case-study sidebar: soft tint, no border, 12px
-       corners. `overflow-hidden` lets the cover take the card's corners. -->
-  <article class="group relative flex h-full flex-col overflow-hidden rounded-xs bg-bg-subtle">
+  <!-- Course-card layout: a white surface with a hairline border, the cover
+       inset by the card's own padding so it reads as a picture *in* the card,
+       then headline and standfirst. -->
+  <article
+    class="group relative flex h-full flex-col rounded-xs border border-border bg-surface p-2 transition-colors duration-200 hover:border-border-hover"
+  >
     <!-- The cover repeats the headline's link, so it is hidden from assistive
          tech and skipped by the keyboard rather than announced twice. -->
     <NuxtLinkLocale
@@ -30,7 +33,7 @@ const isExternal = computed(() => href.value.startsWith('http'))
       :external="isExternal"
       :target="isExternal ? '_blank' : undefined"
       :rel="isExternal ? 'noopener noreferrer' : undefined"
-      class="block overflow-hidden focus-visible:outline-none"
+      class="block overflow-hidden rounded-xs focus-visible:outline-none"
       tabindex="-1"
       aria-hidden="true"
     >
@@ -40,12 +43,12 @@ const isExternal = computed(() => href.value.startsWith('http'))
         width="800"
         height="450"
         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 300px"
-        class="aspect-video w-full object-cover transition-transform duration-500 ease-out-expo group-hover:scale-[1.03]"
+        class="aspect-video w-full object-cover"
         loading="lazy"
       />
     </NuxtLinkLocale>
 
-    <div class="flex flex-1 flex-col p-5">
+    <div class="flex flex-1 flex-col px-3 pb-3 pt-4">
       <h4 class="font-heading text-base/snug tracking-tight text-text">
         <NuxtLinkLocale
           :to="href"

@@ -66,7 +66,7 @@
   },
   "about": {
     "eyebrow": "About",
-    "title": "A developer who cares about the details",
+    "title": "ABOUT ME",
     "description": "I build across the stack, but I'm happiest where data modelling meets interface craft.",
     "basedIn": "Based in",
     "status": "Status",
@@ -74,11 +74,13 @@
     "philosophyLabel": "development philosophy",
     "currentFocus": "Current focus",
     "learningJourney": "Learning journey",
-    "portraitAlt": "Portrait of {name}"
+    "portraitAlt": "Portrait of {name}",
+    "education": "EDUCATION",
+    "contact": "Contact"
   },
   "skills": {
     "eyebrow": "Skills",
-    "title": "Technologies I work with",
+    "title": "SKILLS",
     "description": "Grouped by where they sit in the stack — the tools I reach for most, not an exhaustive list.",
     "frontend": {
       "title": "Frontend",
@@ -99,7 +101,7 @@
   },
   "services": {
     "eyebrow": "Services",
-    "title": "What I can build",
+    "title": "SERVICES",
     "description": "From a single interface to a full product — frontend, API and database, delivered as one system.",
     "webApps": {
       "title": "Web Applications",
@@ -136,7 +138,7 @@
   },
   "experience": {
     "eyebrow": "Experience",
-    "title": "Where I've been learning & building",
+    "title": "EXPERIENCE",
     "description": "A timeline of study, work and the projects that pushed my skills forward.",
     "placeholderNote": "Entries marked [PLACEHOLDER] in the data file are templates — replace with your real history.",
     "kind": {
@@ -169,7 +171,7 @@
     "title": "ALL PROJECTS I'VE DESIGNED AND BUILT",
     "description": "A mix of study projects, open-source experiments.",
     "searchLabel": "Search projects",
-    "searchPlaceholder": "Search by name, tech or role…",
+    "searchPlaceholder": "Search",
     "clearSearch": "Clear search",
     "resultCount": "{count} of {total} projects",
     "noResults": "No projects match “{query}”.",
@@ -204,7 +206,12 @@
     "empty": "No articles yet — check back soon.",
     "minRead": "{count} min read",
     "readArticle": "Read article",
-    "readArticleAria": "{title} — read article"
+    "readArticleAria": "{title} — read article",
+    "searchLabel": "Search articles",
+    "searchPlaceholder": "Search",
+    "clearSearch": "Clear search",
+    "noResults": "No articles match “{query}”.",
+    "seeMore": "See more"
   },
   "blogDetail": {
     "breadcrumb": "Blog",
@@ -212,7 +219,22 @@
     "previous": "Previous",
     "next": "Next",
     "moreArticles": "More articles",
-    "coverAlt": "{title} cover"
+    "coverAlt": "{title} cover",
+    "allArticles": "All Articles",
+    "onThisPage": "On this page",
+    "published": "Published",
+    "readingTime": "Reading time",
+    "category": "Category",
+    "tags": "Tags",
+    "copyLink": "Copy link",
+    "linkCopied": "Link copied",
+    "by": "By {author}",
+    "share": "Share",
+    "textSize": "Text size",
+    "expandImage": "View full size",
+    "closeImage": "Close",
+    "backToTop": "Back to the top",
+    "related": "Related"
   },
   "contact": {
     "eyebrow": "Contact",

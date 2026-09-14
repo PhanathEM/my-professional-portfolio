@@ -31,27 +31,29 @@ const mobileOpen = ref(false)
       scrolled || mobileOpen ? 'bg-bg/72 backdrop-blur-xl backdrop-saturate-150' : 'bg-transparent'
     "
   >
-    <nav
-      class="container-page flex h-16 items-center justify-between gap-4 border-b border-border dark:border-border-hover"
-      :aria-label="$t('a11y.primaryNav')"
-    >
-      <!-- Brand -->
-      <NuxtLinkLocale
-        to="/"
-        class="group flex items-center gap-2.5 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
-        :aria-label="$t('a11y.home')"
+    <nav class="container-page" :aria-label="$t('a11y.primaryNav')">
+      <!-- The baseline sits on this inner row, not the container, so it stops
+           at the content edge — flush with the avatar and the theme switch. -->
+      <div
+        class="flex h-16 items-center justify-between gap-4 border-b border-border dark:border-border-hover"
       >
-        <NuxtImg
-          :src="profile.logo"
-          :alt="profile.name"
-          width="80"
-          height="80"
-          class="size-8 shrink-0 rounded-full object-cover object-top ring-1 ring-border-strong transition-colors group-hover:ring-border-hover"
-        />
-        <span class="text-sm font-semibold tracking-tight">{{ profile.name }}</span>
-      </NuxtLinkLocale>
+        <!-- Brand -->
+        <NuxtLinkLocale
+          to="/"
+          class="group flex items-center gap-2.5 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+          :aria-label="$t('a11y.home')"
+        >
+          <NuxtImg
+            :src="profile.logo"
+            :alt="profile.name"
+            width="80"
+            height="80"
+            class="size-8 shrink-0 rounded-full object-cover object-top ring-1 ring-border-strong transition-colors group-hover:ring-border-hover"
+          />
+          <span class="text-sm font-semibold tracking-tight">{{ profile.name }}</span>
+        </NuxtLinkLocale>
 
-      <!--
+        <!--
         Folder tabs. The baseline lives on the <nav> row, so it runs the full
         container width — from the avatar across to the theme switch. The <ul>
         stretches to the same height and the active tab is pulled down 1px
@@ -61,37 +63,38 @@ const mobileOpen = ref(false)
         Dark mode uses a stronger border: --border is only 9% white there, which
         all but disappears against #0a0a0b.
       -->
-      <ul class="hidden items-end gap-1 self-stretch lg:flex">
-        <li v-for="item in navItems" :key="item.to">
-          <NuxtLinkLocale
-            :to="item.to"
-            class="-mb-px inline-flex h-9 items-center rounded-t-lg border-x border-t px-4 text-sm font-medium transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-accent focus-visible:outline-none"
-            :class="
-              isActive(item)
-                ? 'border-border bg-bg text-cta-ink dark:border-border-hover'
-                : 'border-transparent text-muted hover:text-text'
-            "
+        <ul class="hidden items-end gap-1 self-stretch lg:flex">
+          <li v-for="item in navItems" :key="item.to">
+            <NuxtLinkLocale
+              :to="item.to"
+              class="-mb-px inline-flex h-9 items-center rounded-t-lg border-x border-t px-4 text-sm font-medium transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-accent focus-visible:outline-none"
+              :class="
+                isActive(item)
+                  ? 'border-border bg-bg text-cta-ink dark:border-border-hover'
+                  : 'border-transparent text-muted hover:text-text'
+              "
+            >
+              {{ $t(item.label) }}
+            </NuxtLinkLocale>
+          </li>
+        </ul>
+
+        <div class="flex items-center gap-2">
+          <LanguageToggle />
+          <ThemeToggle />
+
+          <!-- Mobile trigger -->
+          <button
+            type="button"
+            class="inline-flex size-10 items-center justify-center rounded-md border border-border bg-surface text-muted transition-colors hover:text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent lg:hidden"
+            :aria-expanded="mobileOpen"
+            aria-controls="mobile-menu"
+            :aria-label="$t('a11y.toggleMenu')"
+            @click="mobileOpen = !mobileOpen"
           >
-            {{ $t(item.label) }}
-          </NuxtLinkLocale>
-        </li>
-      </ul>
-
-      <div class="flex items-center gap-2">
-        <LanguageToggle />
-        <ThemeToggle />
-
-        <!-- Mobile trigger -->
-        <button
-          type="button"
-          class="inline-flex size-10 items-center justify-center rounded-md border border-border bg-surface text-muted transition-colors hover:text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent lg:hidden"
-          :aria-expanded="mobileOpen"
-          aria-controls="mobile-menu"
-          :aria-label="$t('a11y.toggleMenu')"
-          @click="mobileOpen = !mobileOpen"
-        >
-          <Icon :name="mobileOpen ? 'lucide:x' : 'lucide:menu'" :size="19" aria-hidden="true" />
-        </button>
+            <Icon :name="mobileOpen ? 'lucide:x' : 'lucide:menu'" :size="19" aria-hidden="true" />
+          </button>
+        </div>
       </div>
     </nav>
 

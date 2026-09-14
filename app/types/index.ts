@@ -38,6 +38,8 @@ export interface Skill {
   name: string
   /** Lucide (or iconify) icon name */
   icon: string
+  /** Brand mark from the `logos` collection, for the résumé-style tile grid. */
+  logo?: string
 }
 
 export type ExperienceKind = 'work' | 'education' | 'project'

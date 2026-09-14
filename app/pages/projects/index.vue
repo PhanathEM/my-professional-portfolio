@@ -63,16 +63,12 @@ watch(filtered, () => {
     <header>
       <div class="container-page pt-16 md:pt-20">
         <RevealOnScroll>
-          <div class="flex flex-wrap items-end justify-between gap-x-8 gap-y-6">
-            <SectionHeading
-              as="h1"
-              :title="t('projectsPage.title')"
-              :description="t('projectsPage.description')"
-              description-size="sm"
-              title-size="sm"
-            />
+          <!-- The visible heading was dropped; keep one for assistive tech
+               and search engines, and let the search field take centre stage. -->
+          <h1 class="sr-only">{{ t('projectsPage.title') }}</h1>
 
-            <div class="relative w-full sm:w-96">
+          <div class="flex justify-center">
+            <div class="relative w-full sm:w-72">
               <Icon
                 name="lucide:search"
                 :size="15"

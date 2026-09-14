@@ -75,7 +75,9 @@
     "philosophyLabel": "គោលការណ៍អភិវឌ្ឍន៍",
     "currentFocus": "ការផ្តោតបច្ចុប្បន្ន",
     "learningJourney": "ដំណើរនៃការរៀន",
-    "portraitAlt": "រូបភាពរបស់ {name}"
+    "portraitAlt": "រូបភាពរបស់ {name}",
+    "education": "ការសិក្សា",
+    "contact": "ទំនាក់ទំនង"
   },
   "skills": {
     "eyebrow": "ជំនាញ",
@@ -205,7 +207,12 @@
     "empty": "មិនទាន់មានអត្ថបទ — សូមមកមើលឡើងវិញឆាប់ៗ។",
     "minRead": "អាន {count} នាទី",
     "readArticle": "អានអត្ថបទ",
-    "readArticleAria": "{title} — អានអត្ថបទ"
+    "readArticleAria": "{title} — អានអត្ថបទ",
+    "searchLabel": "ស្វែងរកអត្ថបទ",
+    "searchPlaceholder": "ស្វែងរក",
+    "clearSearch": "សម្អាតការស្វែងរក",
+    "noResults": "រកមិនឃើញអត្ថបទដែលត្រូវនឹង «{query}» ទេ។",
+    "seeMore": "មើលបន្ថែម"
   },
   "blogDetail": {
     "breadcrumb": "ប្លុក",
@@ -213,7 +220,22 @@
     "previous": "មុន",
     "next": "បន្ទាប់",
     "moreArticles": "អត្ថបទផ្សេងទៀត",
-    "coverAlt": "គម្របរបស់ {title}"
+    "coverAlt": "គម្របរបស់ {title}",
+    "allArticles": "អត្ថបទទាំងអស់",
+    "onThisPage": "នៅលើទំព័រនេះ",
+    "published": "បានចេញផ្សាយ",
+    "readingTime": "រយៈពេលអាន",
+    "category": "ប្រភេទ",
+    "tags": "ស្លាក",
+    "copyLink": "ចម្លងតំណ",
+    "linkCopied": "បានចម្លងតំណ",
+    "by": "ដោយ {author}",
+    "share": "ចែករំលែក",
+    "textSize": "ទំហំអក្សរ",
+    "expandImage": "មើលទំហំពេញ",
+    "closeImage": "បិទ",
+    "backToTop": "ត្រឡប់ទៅខាងលើ",
+    "related": "ពាក់ព័ន្ធ"
   },
   "contact": {
     "eyebrow": "ទំនាក់ទំនង",
